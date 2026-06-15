@@ -1,16 +1,13 @@
 # ============================================================
 #  Aesyl Amano — CMS configuration
-#  EDIT THE TWO PLACEHOLDERS BELOW before deploying:
-#    1. repo:      your-github-username/aesylamano
-#    2. base_url:  https://your-auth-worker.your-subdomain.workers.dev
-#  (Both are explained step-by-step in CMS-SETUP.md)
+#  Sign in at /admin using "Sign In with Token" (a GitHub
+#  personal access token). No OAuth app or worker needed.
 # ============================================================
 
 backend:
   name: github
   repo: studioaesylamano/aesylamano
   branch: main
-  base_url: https://YOUR-AUTH-WORKER.workers.dev   # <-- change this (Sveltia auth worker)
 
 # Where uploaded photos are stored in the repo, and how the site references them
 media_folder: "images"
