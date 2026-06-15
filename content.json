@@ -1,0 +1,53 @@
+{
+  "seoTitle": "Aesyl Amano — AI-native film & brand studio",
+  "seoDescription": "Aesyl Amano is an AI-native creative studio making film, brand work, and content systems. Strange, considered, fast. Based in Bulgaria, working worldwide.",
+  "hero": {
+    "marker": "Ethereal & Spectral · −0m",
+    "headline": "From the depths, something stranger.",
+    "lede": "Aesyl Amano is an AI-native film and brand studio. We make work that's luminous, uncanny, and considered — surfaced from somewhere deeper than the brief.",
+    "cta1": "See the work",
+    "cta2": "Start a project",
+    "image": ""
+  },
+  "about": {
+    "heading": "About",
+    "image": "",
+    "paragraphs": [
+      "Aesyl Amano is a small studio that works like a deep-sea expedition. We go down further than most briefs ask for, and bring back things that glow.",
+      "We're AI-native — film, brand systems, and content built with generative tools as the camera, the crew, and the lighting rig. That means we move fast without the work ever looking fast or cheap.",
+      "Based in Sofia, working worldwide, bilingual in English and Bulgarian. Comfort as a baseline — and then we launch from it into something stranger."
+    ],
+    "facts": [
+      { "k": "Discipline", "v": "AI film · brand · content systems" },
+      { "k": "Based", "v": "Sofia, Bulgaria → worldwide" },
+      { "k": "Languages", "v": "English · Български" },
+      { "k": "Tools", "v": "Kling · Seedance · the new frontier" }
+    ]
+  },
+  "work": {
+    "heading": "Selected work",
+    "items": [
+      { "tag": "AI FILM · KLING", "title": "Lantern", "desc": "A two-minute brand film built end-to-end in AI. Otherworldly, warm, no crew.", "image": "" },
+      { "tag": "CAMPAIGN · 9 ASSETS", "title": "Bathyal", "desc": "A launch — one concept, dived into nine platform cuts.", "image": "" },
+      { "tag": "CONCEPT · R&D", "title": "Specimen", "desc": "Concept work probing the line between biology and machine.", "image": "" },
+      { "tag": "IDENTITY · MOTION", "title": "Bioluminescence", "desc": "A living identity in motion — light made from movement.", "image": "" }
+    ]
+  },
+  "services": {
+    "heading": "Services & pricing",
+    "items": [
+      { "marker": "Film", "title": "AI Film", "price": "from €2,400 / film", "feature": false, "features": ["Concept, treatment & shotlist", "End-to-end AI generation", "Edit, grade & sound", "One 60–120s film + cutdowns"] },
+      { "marker": "Most work lives here", "title": "Content System", "price": "from €3,200 / month", "feature": true, "features": ["Monthly production sprint", "8–12 platform-ready assets", "Hooks, captions & specs handled", "One source, every aspect ratio"] },
+      { "marker": "Brand", "title": "Identity & Direction", "price": "on request", "feature": false, "features": ["Visual identity & art direction", "Modal brand system", "Launch films & key art", "Guidelines you can actually use"] }
+    ]
+  },
+  "contact": {
+    "heading": "Surface something stranger.",
+    "lede": "Tell us what you're launching. We'll tell you the fastest honest way to make it good.",
+    "email": "hello@aesylamano.com"
+  },
+  "footer": {
+    "left": "© 2026 Aesyl Amano · Studio Amano",
+    "right": "Sofia, BG → worldwide"
+  }
+}
