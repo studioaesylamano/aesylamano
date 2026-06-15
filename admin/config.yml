@@ -1,0 +1,130 @@
+# ============================================================
+#  Aesyl Amano — CMS configuration
+#  EDIT THE TWO PLACEHOLDERS BELOW before deploying:
+#    1. repo:      your-github-username/aesylamano
+#    2. base_url:  https://your-auth-worker.your-subdomain.workers.dev
+#  (Both are explained step-by-step in CMS-SETUP.md)
+# ============================================================
+
+backend:
+  name: github
+  repo: studioaesylamano/aesylamano
+  branch: main
+  base_url: https://YOUR-AUTH-WORKER.workers.dev   # <-- change this (Sveltia auth worker)
+
+# Where uploaded photos are stored in the repo, and how the site references them
+media_folder: "images"
+public_folder: "/images"
+
+# Friendlier editing experience
+site_url: https://aesylamano.com
+display_url: https://aesylamano.com
+publish_mode: simple
+
+collections:
+  # ---------- The home page (all sections) ----------
+  - name: site
+    label: "Home page"
+    delete: false
+    files:
+      - name: content
+        label: "Home page content"
+        file: "content.json"
+        format: json
+        fields:
+          - { label: "Browser tab title (SEO)", name: seoTitle, widget: string }
+          - { label: "Search description (SEO)", name: seoDescription, widget: text }
+
+          - label: "Hero (top of page)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Small label above headline", name: marker, widget: string }
+              - { label: "Big headline", name: headline, widget: string }
+              - { label: "Intro paragraph", name: lede, widget: text }
+              - { label: "Button 1 text", name: cta1, widget: string }
+              - { label: "Button 2 text", name: cta2, widget: string }
+              - { label: "Background photo", name: image, widget: image, required: false }
+
+          - label: "About"
+            name: about
+            widget: object
+            fields:
+              - { label: "Section heading", name: heading, widget: string }
+              - { label: "Photo", name: image, widget: image, required: false }
+              - label: "Paragraphs"
+                name: paragraphs
+                widget: list
+                summary: "{{fields.text}}"
+                field: { label: "Paragraph", name: text, widget: text }
+              - label: "Facts (side panel)"
+                name: facts
+                widget: list
+                summary: "{{fields.k}}: {{fields.v}}"
+                fields:
+                  - { label: "Label", name: k, widget: string }
+                  - { label: "Value", name: v, widget: string }
+
+          - label: "Selected work"
+            name: work
+            widget: object
+            fields:
+              - { label: "Section heading", name: heading, widget: string }
+              - label: "Projects"
+                name: items
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Tag (small caps)", name: tag, widget: string }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Description", name: desc, widget: text }
+                  - { label: "Photo", name: image, widget: image, required: false }
+
+          - label: "Services & pricing"
+            name: services
+            widget: object
+            fields:
+              - { label: "Section heading", name: heading, widget: string }
+              - label: "Packages"
+                name: items
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Small label", name: marker, widget: string }
+                  - { label: "Package name", name: title, widget: string }
+                  - { label: "Price", name: price, widget: string }
+                  - { label: "Highlight this one?", name: feature, widget: boolean, default: false }
+                  - label: "What's included"
+                    name: features
+                    widget: list
+                    field: { label: "Item", name: item, widget: string }
+
+          - label: "Contact"
+            name: contact
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Intro", name: lede, widget: text }
+              - { label: "Email address", name: email, widget: string }
+
+          - label: "Footer"
+            name: footer
+            widget: object
+            fields:
+              - { label: "Left text", name: left, widget: string }
+              - { label: "Right text", name: right, widget: string }
+
+  # ---------- Extra pages you create yourself ----------
+  - name: pages
+    label: "Extra pages"
+    label_singular: "Page"
+    folder: "pages"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    format: frontmatter
+    summary: "{{title}}"
+    fields:
+      - { label: "Page title", name: title, widget: string }
+      - { label: "Search description (SEO)", name: description, widget: text, required: false }
+      - { label: "Body", name: body, widget: markdown }
