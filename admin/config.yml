@@ -74,8 +74,14 @@ collections:
                 fields:
                   - { label: "Tag (small caps)", name: tag, widget: string }
                   - { label: "Title", name: title, widget: string }
-                  - { label: "Description", name: desc, widget: text }
-                  - { label: "Photo", name: image, widget: image, required: false }
+                  - { label: "Short description (shown on home tile)", name: desc, widget: text }
+                  - { label: "Cover photo", name: image, widget: image, required: false }
+                  - { label: "Full write-up (project detail page)", name: detail, widget: markdown, required: false }
+                  - label: "Gallery photos (detail page)"
+                    name: gallery
+                    widget: list
+                    required: false
+                    field: { label: "Photo", name: image, widget: image }
 
           - label: "Services & pricing"
             name: services
@@ -95,6 +101,7 @@ collections:
                     name: features
                     widget: list
                     field: { label: "Item", name: item, widget: string }
+                  - { label: "Full write-up (service detail page)", name: detail, widget: markdown, required: false }
 
           - label: "Contact"
             name: contact
