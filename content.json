@@ -115,7 +115,13 @@
         "tag": "World Building",
         "title": "Linen Fields",
         "desc": "ABC",
-        "image": ""
+        "image": "/images/AesylAmano43.webp",
+        "detail": "",
+        "gallery": [
+          "/images/AesylAmano41.webp",
+          "/images/AesylAmano42.webp",
+          "/images/AesylAmano44.webp"
+        ]
       },
       {
         "tag": "World Building",
