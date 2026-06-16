@@ -13,32 +13,109 @@
     "heading": "About",
     "image": "",
     "paragraphs": [
-      "Aesyl Amano is a small studio that works like a deep-sea expedition. We go down further than most briefs ask for, and bring back things that glow.",
+      "Aesyl Amano is an independent AI Production Studio based in Sofia and London.",
       "We're AI-native — film, brand systems, and content built with generative tools as the camera, the crew, and the lighting rig. That means we move fast without the work ever looking fast or cheap.",
       "Based in Sofia, working worldwide, bilingual in English and Bulgarian. Comfort as a baseline — and then we launch from it into something stranger."
     ],
     "facts": [
-      { "k": "Discipline", "v": "AI film · brand · content systems" },
-      { "k": "Based", "v": "Sofia, Bulgaria → worldwide" },
-      { "k": "Languages", "v": "English · Български" },
-      { "k": "Tools", "v": "Kling · Seedance · the new frontier" }
+      {
+        "k": "Discipline",
+        "v": "AI film · brand · content systems"
+      },
+      {
+        "k": "Based",
+        "v": "Sofia, Bulgaria → worldwide"
+      },
+      {
+        "k": "Languages",
+        "v": "English · Български"
+      },
+      {
+        "k": "Tools",
+        "v": "Kling · Seedance · the new frontier"
+      }
     ]
   },
   "work": {
     "heading": "Selected work",
     "items": [
-      { "tag": "AI FILM · KLING", "title": "Lantern", "desc": "A two-minute brand film built end-to-end in AI. Otherworldly, warm, no crew.", "image": "" },
-      { "tag": "CAMPAIGN · 9 ASSETS", "title": "Bathyal", "desc": "A launch — one concept, dived into nine platform cuts.", "image": "" },
-      { "tag": "CONCEPT · R&D", "title": "Specimen", "desc": "Concept work probing the line between biology and machine.", "image": "" },
-      { "tag": "IDENTITY · MOTION", "title": "Bioluminescence", "desc": "A living identity in motion — light made from movement.", "image": "" }
+      {
+        "tag": "AI FILM · KLING",
+        "title": "Lantern",
+        "desc": "A two-minute brand film built end-to-end in AI. Otherworldly, warm, no crew.",
+        "image": ""
+      },
+      {
+        "tag": "CAMPAIGN · 9 ASSETS",
+        "title": "Bathyal",
+        "desc": "A launch — one concept, dived into nine platform cuts.",
+        "image": ""
+      },
+      {
+        "tag": "CONCEPT · R&D",
+        "title": "Specimen",
+        "desc": "Concept work probing the line between biology and machine.",
+        "image": ""
+      },
+      {
+        "tag": "IDENTITY · MOTION",
+        "title": "Bioluminescence",
+        "desc": "A living identity in motion — light made from movement.",
+        "image": ""
+      },
+      {
+        "tag": "PROJECT 5",
+        "title": "PROJECT 5",
+        "desc": "ABC",
+        "image": ""
+      },
+      {
+        "tag": "PROJECT 6",
+        "title": "PROJECT 6",
+        "desc": "ABC",
+        "image": ""
+      }
     ]
   },
   "services": {
     "heading": "Services & pricing",
     "items": [
-      { "marker": "Film", "title": "AI Film", "price": "from €2,400 / film", "feature": false, "features": ["Concept, treatment & shotlist", "End-to-end AI generation", "Edit, grade & sound", "One 60–120s film + cutdowns"] },
-      { "marker": "Most work lives here", "title": "Content System", "price": "from €3,200 / month", "feature": true, "features": ["Monthly production sprint", "8–12 platform-ready assets", "Hooks, captions & specs handled", "One source, every aspect ratio"] },
-      { "marker": "Brand", "title": "Identity & Direction", "price": "on request", "feature": false, "features": ["Visual identity & art direction", "Modal brand system", "Launch films & key art", "Guidelines you can actually use"] }
+      {
+        "marker": "Film",
+        "title": "AI Film",
+        "price": "from €2,400 / film",
+        "feature": false,
+        "features": [
+          "Concept, treatment & shotlist",
+          "End-to-end AI generation",
+          "Edit, grade & sound",
+          "One 60–120s film + cutdowns"
+        ]
+      },
+      {
+        "marker": "Most work lives here",
+        "title": "Content System",
+        "price": "from €3,200 / month",
+        "feature": true,
+        "features": [
+          "Monthly production sprint",
+          "8–12 platform-ready assets",
+          "Hooks, captions & specs handled",
+          "One source, every aspect ratio"
+        ]
+      },
+      {
+        "marker": "Brand",
+        "title": "Identity & Direction",
+        "price": "on request",
+        "feature": false,
+        "features": [
+          "Visual identity & art direction",
+          "Modal brand system",
+          "Launch films & key art",
+          "Guidelines you can actually use"
+        ]
+      }
     ]
   },
   "contact": {
