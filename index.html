@@ -58,6 +58,7 @@ body::after{content:"";position:fixed;left:0;right:0;top:0;height:60vh;z-index:-
 .glow{text-shadow:0 0 24px rgba(90,209,255,.45),0 0 60px rgba(74,144,201,.25)}
 .wrap{max-width:1080px;margin:0 auto;padding:0 28px;position:relative}
 a{color:inherit}
+img,.hero-bg,.about-img,.work-card .ph{-webkit-user-drag:none;-moz-user-drag:none;user-drag:none;-webkit-touch-callout:none;user-select:none}
 .edge{height:3px;width:100%;background:linear-gradient(90deg,#050816,#0A0E27,#1E3A6F,#4A90C9,#7BB3E8,#B8D4F1)}
 .depth{position:absolute;left:28px;top:-26px;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:1px;color:var(--cyan);opacity:.7}
 .depth::before{content:"";position:absolute;left:-14px;top:4px;width:6px;height:6px;border-radius:50%;background:var(--glow);box-shadow:0 0 10px var(--glow)}
@@ -282,6 +283,14 @@ footer{padding:50px 0;border-top:1px solid var(--line);font-size:12px;color:var(
 
     const ft=d.footer||{};setText('footer.left',ft.left);setText('footer.right',ft.right);
   }).catch(()=>{/* keep built-in defaults if content.json is missing */});
+})();
+
+/* ===== deter casual image saving (not foolproof — browsers must load images to show them) ===== */
+(function(){
+  document.addEventListener('contextmenu',function(e){
+    if(e.target.tagName==='IMG'||e.target.closest('.hero-bg,.about-img,.work-card .ph'))e.preventDefault();
+  });
+  document.addEventListener('dragstart',function(e){if(e.target.tagName==='IMG')e.preventDefault();});
 })();
 </script>
 
