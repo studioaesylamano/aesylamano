@@ -86,7 +86,22 @@
         "tag": "Campaign for Pokrivki.bg",
         "title": "Family Home",
         "desc": "ABC",
-        "image": ""
+        "image": "/images/AesylAmano20 (1).webp",
+        "detail": "",
+        "gallery": [
+          "/images/AesylAmano21.webp",
+          "/images/AesylAmano22.webp",
+          "/images/AesylAmano23.webp",
+          "/images/AesylAmano24.webp",
+          "/images/AesylAmano25.webp",
+          "/images/AesylAmano26.webp",
+          "/images/AesylAmano28.webp",
+          "/images/AesylAmano27.webp",
+          "/images/AesylAmano29.webp",
+          "/images/AesylAmano30.webp",
+          "/images/AesylAmano31.webp",
+          "/images/AesylAmano32.webp"
+        ]
       },
       {
         "tag": "World Building",
