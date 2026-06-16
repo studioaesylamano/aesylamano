@@ -13,6 +13,7 @@
 <style>
 :root{--abyss:#02040f;--aqua:#B8D4F1;--cyan:#4A90C9;--sky:#7BB3E8;--glow:#5ad1ff;--text:#B8D4F1;--dim:#5e7fa8;--line:rgba(122,179,232,.14)}
 *{margin:0;padding:0;box-sizing:border-box}
+img{-webkit-user-drag:none;-moz-user-drag:none;user-drag:none;-webkit-touch-callout:none}
 html{scroll-behavior:smooth}
 body{background:var(--abyss);color:var(--text);font-family:"Inter",system-ui,sans-serif;font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;min-height:100vh}
 body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(120% 60% at 50% -10%,rgba(90,209,255,.16),transparent 55%),linear-gradient(180deg,#071633,#050b1f 30%,#02040f 75%)}
@@ -115,6 +116,12 @@ article li{margin-bottom:9px;font-size:17px}
     if(!lb.classList.contains('on'))return;
     if(e.key==='Escape')close();else if(e.key==='ArrowLeft')go(-1);else if(e.key==='ArrowRight')go(1);
   });
+})();
+
+/* ===== deter casual image saving (not foolproof) ===== */
+(function(){
+  document.addEventListener('contextmenu',function(e){if(e.target.tagName==='IMG'||e.target.closest('.hero-img'))e.preventDefault();});
+  document.addEventListener('dragstart',function(e){if(e.target.tagName==='IMG')e.preventDefault();});
 })();
 </script>
 </body>
