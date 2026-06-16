@@ -133,8 +133,19 @@
         "tag": "World Building",
         "title": "Capri Series",
         "desc": "ABC",
-        "image": "",
-        "detail": ""
+        "image": "/images/AesylAmano57.webp",
+        "detail": "",
+        "gallery": [
+          "/images/AesylAmano56.webp",
+          "/images/AesylAmano58.webp",
+          "/images/AesylAmano59.webp",
+          "/images/AesylAmano60.webp",
+          "/images/AesylAmano51.webp",
+          "/images/AesylAmano52.webp",
+          "/images/AesylAmano53.webp",
+          "/images/AesylAmano55.webp",
+          "/images/AesylAmano54.webp"
+        ]
       }
     ]
   },
