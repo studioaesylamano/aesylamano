@@ -46,39 +46,39 @@
         "image": "/images/c1_edited10_4k.png"
       },
       {
-        "tag": "CAMPAIGN · 9 ASSETS",
-        "title": "Bathyal",
-        "desc": "A launch — one concept, dived into nine platform cuts.",
-        "image": ""
-      },
-      {
-        "tag": "CONCEPT · R&D",
-        "title": "Specimen",
-        "desc": "Concept work probing the line between biology and machine.",
-        "image": ""
-      },
-      {
-        "tag": "IDENTITY · MOTION",
-        "title": "Bioluminescence",
-        "desc": "A living identity in motion — light made from movement.",
-        "image": ""
-      },
-      {
-        "tag": "PROJECT 5",
-        "title": "PROJECT 5",
+        "tag": "Campaign for LLAGGI",
+        "title": "Stadium",
         "desc": "ABC",
         "image": ""
       },
       {
-        "tag": "PROJECT 6",
-        "title": "PROJECT 6",
+        "tag": "Campaign for Teodor",
+        "title": "Studio",
+        "desc": "ABC",
+        "image": ""
+      },
+      {
+        "tag": "Campaign for Pokrivki.bg",
+        "title": "Family Home",
+        "desc": "ABC",
+        "image": ""
+      },
+      {
+        "tag": "World Building",
+        "title": "Linen Fields",
+        "desc": "ABC",
+        "image": ""
+      },
+      {
+        "tag": "World Building",
+        "title": "Capri Series",
         "desc": "ABC",
         "image": ""
       }
     ]
   },
   "services": {
-    "heading": "Services & pricing",
+    "heading": "Services & Pricing",
     "items": [
       {
         "marker": "Let the world carry your brand",
