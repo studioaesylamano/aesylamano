@@ -35,7 +35,16 @@ article a{color:var(--glow)}
 article ul,article ol{margin:0 0 22px 22px;color:var(--aqua)}
 article li{margin-bottom:9px;font-size:17px}
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:36px 0}
-.gallery img{width:100%;height:240px;object-fit:cover;border-radius:4px}
+.gallery img{width:100%;height:240px;object-fit:cover;border-radius:4px;cursor:zoom-in;transition:.25s}
+.gallery img:hover{filter:brightness(1.1);box-shadow:0 0 24px rgba(90,209,255,.3)}
+#lb{position:fixed;inset:0;z-index:200;background:rgba(2,4,15,.93);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:30px;cursor:zoom-out}
+#lb.on{display:flex}
+#lb img{max-width:95vw;max-height:90vh;border-radius:4px;box-shadow:0 0 70px rgba(90,209,255,.25)}
+#lb .x{position:absolute;top:18px;right:26px;font-family:"JetBrains Mono",monospace;color:var(--aqua);font-size:26px;cursor:pointer;line-height:1}
+#lb .nav{position:absolute;top:50%;transform:translateY(-50%);font-size:40px;color:var(--aqua);cursor:pointer;padding:10px 18px;user-select:none;opacity:.65;transition:.2s}
+#lb .nav:hover{opacity:1;color:var(--glow)}
+#lb .prev{left:10px}#lb .next{right:10px}
+@media(max-width:600px){#lb .nav{font-size:30px;padding:6px 10px}}
 .cta{margin-top:50px;padding-top:34px;border-top:1px solid var(--line)}
 .cta a{display:inline-block;padding:15px 32px;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;text-decoration:none;font-family:"Space Grotesk",sans-serif;font-weight:600;background:var(--cyan);color:#02040f;border-radius:2px;box-shadow:0 0 30px rgba(74,144,201,.4);transition:.25s}
 .cta a:hover{background:var(--sky);box-shadow:0 0 44px rgba(90,209,255,.6)}
@@ -51,6 +60,8 @@ article li{margin-bottom:9px;font-size:17px}
 </header>
 <main><article id="detail"><p class="err">Loading…</p></article></main>
 <div class="edge"></div>
+
+<div id="lb"><span class="x" aria-label="Close">✕</span><span class="nav prev" aria-label="Previous">‹</span><img alt="" /><span class="nav next" aria-label="Next">›</span></div>
 
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
@@ -79,6 +90,31 @@ article li{margin-bottom:9px;font-size:17px}
     html+='<div class="cta"><a href="/#contact">Start a project →</a></div>';
     el.innerHTML=html;
   }).catch(()=>{el.innerHTML='<p class="err">Could not load. <a href="/" style="color:var(--glow)">Back to home</a></p>';});
+})();
+
+/* ===== gallery lightbox ===== */
+(function(){
+  var lb=document.getElementById('lb'),lbimg=lb.querySelector('img');
+  var imgs=[],cur=0;
+  function refresh(){imgs=[].slice.call(document.querySelectorAll('.gallery img'));}
+  function open(i){refresh();cur=i;lbimg.src=imgs[cur].src;lb.classList.add('on');document.body.style.overflow='hidden';}
+  function close(){lb.classList.remove('on');lbimg.src='';document.body.style.overflow='';}
+  function go(d){if(!imgs.length)return;cur=(cur+d+imgs.length)%imgs.length;lbimg.src=imgs[cur].src;}
+  document.addEventListener('click',function(e){
+    var t=e.target;
+    if(t&&t.closest&&t.closest('.gallery img')){refresh();open(imgs.indexOf(t.closest('.gallery img')));}
+  });
+  lb.addEventListener('click',function(e){
+    if(e.target.classList.contains('x')){close();}
+    else if(e.target.classList.contains('prev')){e.stopPropagation();go(-1);}
+    else if(e.target.classList.contains('next')){e.stopPropagation();go(1);}
+    else if(e.target===lb){close();}
+  });
+  lbimg.addEventListener('click',function(e){e.stopPropagation();});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('on'))return;
+    if(e.key==='Escape')close();else if(e.key==='ArrowLeft')go(-1);else if(e.key==='ArrowRight')go(1);
+  });
 })();
 </script>
 </body>
