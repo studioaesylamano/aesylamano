@@ -35,10 +35,33 @@ article strong{color:#dCEaFb;font-weight:500}
 article a{color:var(--glow)}
 article ul,article ol{margin:0 0 22px 22px;color:var(--aqua)}
 article li{margin-bottom:9px;font-size:17px}
-.gallery{column-count:2;column-gap:12px;margin:36px 0}
-@media(max-width:600px){.gallery{column-count:1}}
-.gallery img{width:100%;height:auto;display:block;margin:0 0 12px;border-radius:4px;cursor:zoom-in;transition:.25s;break-inside:avoid}
+.gallery{margin:36px 0}
+.gallery img{border-radius:4px;cursor:zoom-in;transition:filter .25s,box-shadow .25s;display:block}
 .gallery img:hover{filter:brightness(1.08);box-shadow:0 0 24px rgba(90,209,255,.3)}
+.gallery.m2{column-count:2;column-gap:12px}
+.gallery.m2 img{width:100%;height:auto;margin:0 0 12px;break-inside:avoid}
+.gallery.m3{column-count:3;column-gap:10px}
+.gallery.m3 img{width:100%;height:auto;margin:0 0 10px;break-inside:avoid}
+.gallery.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+.gallery.g2 img{width:100%;height:auto}
+.gallery.jr{display:flex;flex-wrap:wrap;gap:8px}
+.gallery.jr img{height:240px;width:auto;object-fit:cover;max-width:100%}
+.gallery.cr{position:relative;text-align:center}
+.gallery.cr img{display:none;width:auto;max-width:100%;max-height:78vh;margin:0 auto}
+.gallery.cr img.cur{display:inline-block}
+@media(max-width:600px){.gallery.m2{column-count:1}.gallery.m3{column-count:2}.gallery.g2{grid-template-columns:1fr}.gallery.jr img{height:180px}}
+.crctl{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:14px}
+.crctl button{width:38px;height:38px;border-radius:50%;border:1px solid var(--cyan);background:transparent;color:var(--aqua);font-size:20px;cursor:pointer;line-height:1}
+.crctl button:hover{background:var(--cyan);color:#02040f}
+.cdots{display:flex;gap:6px}
+.cdot{width:7px;height:7px;border-radius:50%;background:rgba(122,179,232,.3)}
+.cdot.on{background:var(--glow)}
+#lyt{display:none}
+body.lyton #lyt{display:flex;position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:300;gap:4px;background:rgba(4,8,20,.95);border:1px solid var(--cyan);border-radius:999px;padding:6px 8px;align-items:center}
+#lyt .ll{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--dim);text-transform:uppercase;padding:0 8px;letter-spacing:1px}
+#lyt button{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--aqua);background:transparent;border:none;padding:7px 12px;border-radius:999px;cursor:pointer}
+#lyt button:hover{color:#fff}
+#lyt button.on{background:var(--cyan);color:#02040f}
 #lb{position:fixed;inset:0;z-index:200;background:rgba(2,4,15,.93);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:30px;cursor:zoom-out}
 #lb.on{display:flex}
 #lb img{max-width:95vw;max-height:90vh;border-radius:4px;box-shadow:0 0 70px rgba(90,209,255,.25)}
@@ -65,6 +88,8 @@ article li{margin-bottom:9px;font-size:17px}
 
 <div id="lb"><span class="x" aria-label="Close">✕</span><span class="nav prev" aria-label="Previous">‹</span><img alt="" /><span class="nav next" aria-label="Next">›</span></div>
 
+<div id="lyt"><span class="ll">Layout</span><button data-l="m2">2-col</button><button data-l="m3">3-col</button><button data-l="g2">Grid</button><button data-l="jr">Rows</button><button data-l="cr">Carousel</button></div>
+
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
 (function(){
@@ -87,10 +112,11 @@ article li{margin-bottom:9px;font-size:17px}
     // detail markdown (already contains its own H2 heading)
     html+=marked.parse(it.detail||('## '+(it.title||'')+'\n\n'+(it.desc||'')));
     if(type!=='service'&&Array.isArray(it.gallery)&&it.gallery.length){
-      html+='<div class="gallery">'+it.gallery.map(g=>'<img src="'+img(g)+'" alt="" />').join('')+'</div>';
+      html+='<div class="gallery m2" id="gal">'+it.gallery.map(g=>'<img src="'+img(g)+'" alt="" />').join('')+'</div>';
     }
     html+='<div class="cta"><a href="/#contact">Start a project →</a></div>';
     el.innerHTML=html;
+    if(window.initLayouts)window.initLayouts();
   }).catch(()=>{el.innerHTML='<p class="err">Could not load. <a href="/" style="color:var(--glow)">Back to home</a></p>';});
 })();
 
@@ -123,6 +149,52 @@ article li{margin-bottom:9px;font-size:17px}
 (function(){
   document.addEventListener('contextmenu',function(e){if(e.target.tagName==='IMG'||e.target.closest('.hero-img'))e.preventDefault();});
   document.addEventListener('dragstart',function(e){if(e.target.tagName==='IMG')e.preventDefault();});
+})();
+
+/* ===== gallery layout switcher (hidden; Shift+L or #layouts to reveal) ===== */
+(function(){
+  function justify(g){
+    var imgs=[].slice.call(g.querySelectorAll('img'));
+    if(!imgs.length)return;
+    if(!imgs.every(function(im){return im.complete&&im.naturalWidth;})){
+      imgs.forEach(function(im){im.addEventListener('load',function(){justify(g);},{once:true});});return;
+    }
+    var gap=8,target=(window.innerWidth<=600?180:240),cw=g.clientWidth,row=[],s=0;
+    function flush(last){if(!row.length)return;var gaps=gap*(row.length-1),h=last?target:(cw-gaps)/s;if(h>target*1.7)h=target;row.forEach(function(im){var ar=im.naturalWidth/im.naturalHeight;im.style.height=Math.round(h)+'px';im.style.width=Math.round(ar*h)+'px';});row=[];s=0;}
+    imgs.forEach(function(im){var ar=im.naturalWidth/im.naturalHeight;s+=ar;row.push(im);if(s*target+gap*(row.length-1)>=cw)flush(false);});flush(true);
+  }
+  function carousel(g){
+    var imgs=[].slice.call(g.querySelectorAll('img'));if(!imgs.length)return;var cur=0;
+    imgs.forEach(function(im,i){im.classList.toggle('cur',i===0);});
+    var ctl=document.createElement('div');ctl.className='crctl';
+    ctl.innerHTML='<button class="cprev" aria-label="Previous">‹</button><span class="cdots"></span><button class="cnext" aria-label="Next">›</button>';
+    g.parentNode.insertBefore(ctl,g.nextSibling);
+    var dots=ctl.querySelector('.cdots');
+    imgs.forEach(function(_,i){var d=document.createElement('span');d.className='cdot'+(i===0?' on':'');dots.appendChild(d);});
+    function show(i){cur=(i+imgs.length)%imgs.length;imgs.forEach(function(im,k){im.classList.toggle('cur',k===cur);});[].slice.call(dots.children).forEach(function(d,k){d.classList.toggle('on',k===cur);});}
+    ctl.querySelector('.cprev').addEventListener('click',function(){show(cur-1);});
+    ctl.querySelector('.cnext').addEventListener('click',function(){show(cur+1);});
+  }
+  function apply(name){
+    var g=document.getElementById('gal');if(!g)return;
+    var ctl=g.parentNode.querySelector('.crctl');if(ctl)ctl.remove();
+    [].slice.call(g.querySelectorAll('img')).forEach(function(im){im.style.width='';im.style.height='';im.classList.remove('cur');});
+    g.className='gallery '+name;
+    if(name==='jr')justify(g);
+    if(name==='cr')carousel(g);
+    var bs=document.querySelectorAll('#lyt button');for(var i=0;i<bs.length;i++)bs[i].classList.toggle('on',bs[i].getAttribute('data-l')===name);
+    try{localStorage.setItem('galLayout',name);}catch(e){}
+  }
+  window.initLayouts=function(){
+    if(!document.getElementById('gal'))return;
+    var saved='m2';try{saved=localStorage.getItem('galLayout')||'m2';}catch(e){}
+    apply(saved);
+    var bs=document.querySelectorAll('#lyt button');
+    for(var i=0;i<bs.length;i++){(function(b){b.addEventListener('click',function(){apply(b.getAttribute('data-l'));});})(bs[i]);}
+    var t;window.addEventListener('resize',function(){var g=document.getElementById('gal');if(g&&g.classList.contains('jr')){clearTimeout(t);t=setTimeout(function(){justify(g);},120);}});
+    if(location.hash==='#layouts')document.body.classList.add('lyton');
+    document.addEventListener('keydown',function(e){if(e.shiftKey&&e.key.toLowerCase()==='l'){document.body.classList.toggle('lyton');}});
+  };
 })();
 </script>
 </body>
