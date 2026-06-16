@@ -1,0 +1,8 @@
+/*
+  Cache-Control: no-cache
+
+/content.json
+  Cache-Control: no-store
+
+/images/*
+  Cache-Control: public, max-age=604800
