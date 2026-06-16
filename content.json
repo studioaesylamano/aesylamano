@@ -81,39 +81,49 @@
     "heading": "Services & pricing",
     "items": [
       {
-        "marker": "Film",
-        "title": "AI Film",
-        "price": "from €2,400 / film",
+        "marker": "Let the world carry your brand",
+        "title": "AI Production",
+        "price": "from €X,XXX",
         "feature": false,
         "features": [
-          "Concept, treatment & shotlist",
-          "End-to-end AI generation",
-          "Edit, grade & sound",
-          "One 60–120s film + cutdowns"
+          "Editorial/Campaign",
+          "Brand Films",
+          "Product Photography",
+          "Music & SFX",
+          "Prompt Engineering",
+          "Voice Cloning",
+          "Digital Twins",
+          "Interior Visualisation"
         ]
       },
       {
-        "marker": "Most work lives here",
-        "title": "Content System",
-        "price": "from €3,200 / month",
-        "feature": true,
+        "marker": "Fracture Reality",
+        "title": "Digital & Interactive",
+        "price": "from €X,XXX",
+        "feature": false,
         "features": [
-          "Monthly production sprint",
-          "8–12 platform-ready assets",
-          "Hooks, captions & specs handled",
-          "One source, every aspect ratio"
+          "AR/VR",
+          "Holographic Events",
+          "Virtual Try-On",
+          "Live AI Avatars",
+          "Custom GPTs",
+          "Customer Support Agents",
+          "Internal Automation"
         ]
       },
       {
-        "marker": "Brand",
-        "title": "Identity & Direction",
-        "price": "on request",
+        "marker": "Don't reach. Be found.",
+        "title": "Marketing",
+        "price": "from €X,XXX",
         "feature": false,
         "features": [
-          "Visual identity & art direction",
-          "Modal brand system",
-          "Launch films & key art",
-          "Guidelines you can actually use"
+          "Content Strategy",
+          "Dynamic Creative Optimisation",
+          "Personalised Campaigns",
+          "Localisation",
+          "Social Media Management",
+          "SEO",
+          "Workshops"
         ]
       }
     ]
