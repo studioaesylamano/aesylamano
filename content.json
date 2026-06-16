@@ -58,7 +58,16 @@
         "tag": "Campaign for LLAGGI",
         "title": "Stadium",
         "desc": "ABC",
-        "image": ""
+        "image": "/images/o11_pose1.png",
+        "detail": "",
+        "gallery": [
+          "/images/freepik_valentin-wearing-crewneck-tee-with-drawstring-shorts-seated-spine-forward-right-elbow-on-raised-knee-right-hand-near-face-fingers-curled-head-tilted-right-gaze-into-lens-framing-from-wais_0001.png",
+          "/images/o11_pose6.png",
+          "/images/o13_pose2.png",
+          "/images/o12_pose5.png",
+          "/images/o11_pose4.png",
+          "/images/o13_pose5.png"
+        ]
       },
       {
         "tag": "Campaign for Teodor",
