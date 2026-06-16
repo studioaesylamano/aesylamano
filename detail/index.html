@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aesyl Amano</title>
+<meta name="description" content="" />
+<meta name="theme-color" content="#02040f" />
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;△&lt;/text&gt;&lt;/svg&gt;" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+:root{--abyss:#02040f;--aqua:#B8D4F1;--cyan:#4A90C9;--sky:#7BB3E8;--glow:#5ad1ff;--text:#B8D4F1;--dim:#5e7fa8;--line:rgba(122,179,232,.14)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--abyss);color:var(--text);font-family:"Inter",system-ui,sans-serif;font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;min-height:100vh}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(120% 60% at 50% -10%,rgba(90,209,255,.16),transparent 55%),linear-gradient(180deg,#071633,#050b1f 30%,#02040f 75%)}
+header.bar{position:sticky;top:0;z-index:50;background:rgba(2,4,15,.6);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar-in{max-width:880px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:"Space Grotesk",sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:3px;font-size:15px;text-decoration:none;color:var(--aqua)}
+.bar-in a.back{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--dim);text-decoration:none}
+.bar-in a.back:hover{color:var(--aqua)}
+main{max-width:880px;margin:0 auto;padding:70px 28px 120px}
+.edge{height:3px;width:100%;background:linear-gradient(90deg,#050816,#0A0E27,#1E3A6F,#4A90C9,#7BB3E8,#B8D4F1)}
+.tag{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);display:block;margin-bottom:18px}
+.hero-img{width:100%;height:auto;border-radius:5px;margin:0 0 36px;display:block}
+.price{font-family:"JetBrains Mono",monospace;font-size:17px;color:var(--sky);margin:8px 0 30px}
+article h1{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:clamp(36px,7vw,68px);line-height:1.02;letter-spacing:-.02em;color:#dCEaFb;margin-bottom:28px;text-shadow:0 0 24px rgba(90,209,255,.35)}
+article h2{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:30px;color:#dCEaFb;margin:8px 0 18px}
+article h3{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:20px;color:var(--aqua);margin:34px 0 12px}
+article p{font-size:18px;color:var(--aqua);margin-bottom:20px}
+article strong{color:#dCEaFb;font-weight:500}
+article a{color:var(--glow)}
+article ul,article ol{margin:0 0 22px 22px;color:var(--aqua)}
+article li{margin-bottom:9px;font-size:17px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:36px 0}
+.gallery img{width:100%;height:240px;object-fit:cover;border-radius:4px}
+.cta{margin-top:50px;padding-top:34px;border-top:1px solid var(--line)}
+.cta a{display:inline-block;padding:15px 32px;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;text-decoration:none;font-family:"Space Grotesk",sans-serif;font-weight:600;background:var(--cyan);color:#02040f;border-radius:2px;box-shadow:0 0 30px rgba(74,144,201,.4);transition:.25s}
+.cta a:hover{background:var(--sky);box-shadow:0 0 44px rgba(90,209,255,.6)}
+.err{font-family:"JetBrains Mono",monospace;color:var(--dim);text-align:center;padding:80px 0}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="bar-in">
+    <a href="/" class="logo">Aesyl Amano</a>
+    <a href="/" class="back">← back to home</a>
+  </div>
+</header>
+<main><article id="detail"><p class="err">Loading…</p></article></main>
+<div class="edge"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+(function(){
+  const q=new URLSearchParams(location.search);
+  const type=(q.get('type')||'').toLowerCase();
+  const want=(q.get('slug')||'').toLowerCase();
+  const el=document.getElementById('detail');
+  const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const img=p=>p?(/^https?:|^\//.test(p)?p:'/'+p.replace(/^\/+/,'')):'';
+  const slug=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+  fetch('/content.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(d=>{
+    const list=type==='service'?((d.services||{}).items||[]):((d.work||{}).items||[]);
+    const it=list.find(x=>slug(x.title)===want);
+    if(!it){el.innerHTML='<p class="err">Not found. <a href="/" style="color:var(--glow)">Back to home</a></p>';return;}
+    document.title=it.title+' — Aesyl Amano';
+    let html='';
+    html+='<span class="tag">'+esc(it.tag||it.marker||'')+'</span>';
+    if(it.image){html+='<img class="hero-img" src="'+img(it.image)+'" alt="'+esc(it.title)+'" />';}
+    if(type==='service'&&it.price){/* price shown after heading via detail; also show here */}
+    // detail markdown (already contains its own H2 heading)
+    html+=marked.parse(it.detail||('## '+(it.title||'')+'\n\n'+(it.desc||'')));
+    if(type!=='service'&&Array.isArray(it.gallery)&&it.gallery.length){
+      html+='<div class="gallery">'+it.gallery.map(g=>'<img src="'+img(g)+'" alt="" />').join('')+'</div>';
+    }
+    html+='<div class="cta"><a href="/#contact">Start a project →</a></div>';
+    el.innerHTML=html;
+  }).catch(()=>{el.innerHTML='<p class="err">Could not load. <a href="/" style="color:var(--glow)">Back to home</a></p>';});
+})();
+</script>
+</body>
+</html>
