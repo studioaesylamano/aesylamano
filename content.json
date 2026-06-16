@@ -43,7 +43,16 @@
         "tag": "Campaign for Teodor",
         "title": "Water Reflections",
         "desc": "ABC",
-        "image": "/images/c1_edited10_4k.png"
+        "image": "/images/aesyl-amano-o2-pose4.webp",
+        "detail": "ABC",
+        "gallery": [
+          "/images/aesyl-amano-o7-pose4.webp",
+          "/images/aesyl-amano-o4-pose5.webp",
+          "/images/aesyl-amano-o1-pose2.webp",
+          "/images/aesyl-amano-o5-pose2.webp",
+          "/images/aesyl-amano-o6-pose2.webp",
+          "/images/aesyl-amano-o3-pose5.webp"
+        ]
       },
       {
         "tag": "Campaign for LLAGGI",
