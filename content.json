@@ -73,7 +73,14 @@
         "tag": "Campaign for Teodor",
         "title": "Studio",
         "desc": "ABC",
-        "image": ""
+        "image": "/images/c3_edited1_4k.webp",
+        "detail": "",
+        "gallery": [
+          "/images/c3_edited10_4k.webp",
+          "/images/c3_edited3.1_4k.webp",
+          "/images/c3_edited11_4k.webp",
+          "/images/c3_edited5_4k.webp"
+        ]
       },
       {
         "tag": "Campaign for Pokrivki.bg",
