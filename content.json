@@ -112,22 +112,29 @@
         ]
       },
       {
-        "tag": "World Building",
-        "title": "Linen Fields",
+        "tag": "Fashion",
+        "title": "Dark Fantasy",
         "desc": "ABC",
-        "image": "/images/AesylAmano43.webp",
+        "image": "/images/AesylAmano50.webp",
         "detail": "",
         "gallery": [
-          "/images/AesylAmano41.webp",
+          "/images/AesylAmano46.webp",
+          "/images/AesylAmano47.webp",
+          "/images/AesylAmano45.webp",
+          "/images/AesylAmano44.webp",
+          "/images/AesylAmano48.webp",
+          "/images/AesylAmano49.webp",
           "/images/AesylAmano42.webp",
-          "/images/AesylAmano44.webp"
+          "/images/AesylAmano41.webp",
+          "/images/AesylAmano43.webp"
         ]
       },
       {
         "tag": "World Building",
         "title": "Capri Series",
         "desc": "ABC",
-        "image": ""
+        "image": "",
+        "detail": ""
       }
     ]
   },
