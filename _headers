@@ -1,8 +1,5 @@
 /*
-  Cache-Control: no-cache
-
-/content.json
-  Cache-Control: no-store
+  Cache-Control: no-store, must-revalidate
 
 /images/*
   Cache-Control: public, max-age=604800
