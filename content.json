@@ -9,30 +9,65 @@
     "cta2": "Start a project",
     "image": ""
   },
-  "about": {
-    "heading": "About",
-    "image": "",
-    "paragraphs": [
-      "Aesyl Amano is an independent AI Production Studio based in Sofia and London.",
-      "We're AI-native — film, brand systems, and content built with generative tools as the camera, the crew, and the lighting rig. That means we move fast without the work ever looking fast or cheap.",
-      "Based in Sofia, working worldwide, bilingual in English and Bulgarian. Comfort as a baseline — and then we launch from it into something stranger."
-    ],
-    "facts": [
+  "logos": {
+    "heading": "",
+    "items": [
       {
-        "k": "Discipline",
-        "v": "AI film · brand · content systems"
+        "image": "/images/BOCHKO.jpg"
       },
       {
-        "k": "Based",
-        "v": "Sofia, Bulgaria → worldwide"
+        "image": "/images/BPFL.jpg"
       },
       {
-        "k": "Languages",
-        "v": "English · Български"
+        "image": "/images/CUPFFEE.jpg"
       },
       {
-        "k": "Tools",
-        "v": "Kling · Seedance · the new frontier"
+        "image": "/images/ELYSEE RESIDENCE.jpg"
+      },
+      {
+        "image": "/images/FOODCARD.jpg"
+      },
+      {
+        "image": "/images/GREEN FOREST.jpg"
+      },
+      {
+        "image": "/images/ISLEEP.jpg"
+      },
+      {
+        "image": "/images/KATALOG DOM.jpg"
+      },
+      {
+        "image": "/images/EVOLUTION VASSO.jpg"
+      },
+      {
+        "image": "/images/MSG PLS.jpg"
+      },
+      {
+        "image": "/images/P.jpg"
+      },
+      {
+        "image": "/images/PARKFLY GENEVA.jpg"
+      },
+      {
+        "image": "/images/PLATINUM.jpg"
+      },
+      {
+        "image": "/images/RAZLOG RESIDENTIAL PARK.jpg"
+      },
+      {
+        "image": "/images/RST.jpg"
+      },
+      {
+        "image": "/images/sjelro.jpg"
+      },
+      {
+        "image": "/images/SOMONI.jpg"
+      },
+      {
+        "image": "/images/TIME STUDIO.jpg"
+      },
+      {
+        "image": "/images/TEODOR.jpg"
       }
     ]
   },
@@ -211,5 +246,32 @@
   "footer": {
     "left": "© 2026 Aesyl Amano · Studio Amano",
     "right": "Sofia, BG → worldwide"
+  },
+  "about": {
+    "facts": [
+      {
+        "v": "AI film · brand · content systems",
+        "k": "Discipline"
+      },
+      {
+        "v": "Sofia, Bulgaria → worldwide",
+        "k": "Based"
+      },
+      {
+        "v": "English · Български",
+        "k": "Languages"
+      },
+      {
+        "v": "Kling · Seedance · the new frontier",
+        "k": "Tools"
+      }
+    ],
+    "paragraphs": [
+      "Aesyl Amano is an independent AI Production Studio based in Sofia and London.",
+      "We're AI-native — film, brand systems, and content built with generative tools as the camera, the crew, and the lighting rig. That means we move fast without the work ever looking fast or cheap.",
+      "Based in Sofia, working worldwide, bilingual in English and Bulgarian. Comfort as a baseline — and then we launch from it into something stranger."
+    ],
+    "image": "",
+    "heading": "About"
   }
 }
