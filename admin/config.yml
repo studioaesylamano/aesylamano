@@ -112,6 +112,15 @@ collections:
               - { label: "Left text", name: left, widget: string }
               - { label: "Right text", name: right, widget: string }
 
+          - label: "Social links (footer icons)"
+            name: social
+            widget: object
+            fields:
+              - { label: "Instagram URL", name: instagram, widget: string, required: false }
+              - { label: "LinkedIn URL", name: linkedin, widget: string, required: false }
+              - { label: "TikTok URL", name: tiktok, widget: string, required: false }
+              - { label: "YouTube URL", name: youtube, widget: string, required: false }
+
   # ---------- Extra pages you create yourself ----------
   - name: pages
     label: "Extra pages"
