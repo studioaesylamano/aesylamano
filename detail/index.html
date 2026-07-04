@@ -107,12 +107,12 @@ body.lyton #lyt{display:flex;position:fixed;bottom:18px;left:50%;transform:trans
     document.title=it.title+' — Aesyl Amano';
     let html='';
     html+='<span class="tag">'+esc(it.tag||it.marker||'')+'</span>';
-    if(it.image){html+='<img class="hero-img" src="'+img(it.image)+'" alt="'+esc(it.title)+'" />';}
+    if(it.image){html+='<img class="hero-img" src="'+img(it.image)+'" alt="'+esc(it.title)+'" decoding="async" />';}
     if(type==='service'&&it.price){/* price shown after heading via detail; also show here */}
     // detail markdown (already contains its own H2 heading)
     html+=marked.parse(it.detail||('## '+(it.title||'')+'\n\n'+(it.desc||'')));
     if(type!=='service'&&Array.isArray(it.gallery)&&it.gallery.length){
-      html+='<div class="gallery m2" id="gal">'+it.gallery.map(g=>'<img src="'+img(g)+'" alt="" />').join('')+'</div>';
+      html+='<div class="gallery m2" id="gal">'+it.gallery.map(g=>'<img src="'+img(g)+'" alt="" loading="lazy" decoding="async" />').join('')+'</div>';
     }
     html+='<div class="cta"><a href="/#contact">Start a project →</a></div>';
     el.innerHTML=html;
