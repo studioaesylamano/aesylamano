@@ -39,7 +39,8 @@
 <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;△&lt;/text&gt;&lt;/svg&gt;" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
 
 <style>
 :root{
@@ -139,7 +140,6 @@ footer{padding:50px 0;border-top:1px solid var(--line);font-size:12px;color:var(
 .marquee::before{left:0;background:linear-gradient(90deg,#02040f,rgba(2,4,15,0))}
 .marquee::after{right:0;background:linear-gradient(270deg,#02040f,rgba(2,4,15,0))}
 .marquee-track{display:flex;align-items:center;gap:84px;width:max-content;animation:logoscroll 40s linear infinite}
-.marquee:hover .marquee-track{animation-play-state:paused}
 @keyframes logoscroll{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 .logo-item{flex:0 0 auto;height:88px;display:flex;align-items:center;justify-content:center}
 .logo-item img{height:88px;width:auto;max-width:280px;object-fit:contain;opacity:.85;transform-origin:center;transition:transform .3s ease,opacity .25s}
@@ -263,6 +263,13 @@ footer{padding:50px 0;border-top:1px solid var(--line);font-size:12px;color:var(
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target,bg=el.getAttribute('data-bg');if(bg){el.style.backgroundImage='url('+bg+')';el.removeAttribute('data-bg');}io.unobserve(el);}});},{rootMargin:'400px'});
     els.forEach(function(el){io.observe(el);});
   }
+  function lazyLogos(){
+    var strip=document.getElementById('clients'); if(!strip)return;
+    function load(){document.querySelectorAll('#logo-track img[data-src]').forEach(function(im){im.src=im.getAttribute('data-src');im.removeAttribute('data-src');});}
+    if(!('IntersectionObserver' in window)){load();return;}
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){load();io.disconnect();}});},{rootMargin:'300px'});
+    io.observe(strip);
+  }
   fetch('content.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(d=>{
     if(d.seoTitle){document.title=d.seoTitle;}
     if(d.seoDescription){const m=document.querySelector('meta[name=description]');if(m)m.setAttribute('content',d.seoDescription);}
@@ -274,8 +281,9 @@ footer{padding:50px 0;border-top:1px solid var(--line);font-size:12px;color:var(
     const lg=d.logos||{};
     if(lg.heading){document.getElementById('clients-heading').textContent=lg.heading;}
     var logoItems=(lg&&Array.isArray(lg.items)&&lg.items.length)?lg.items:[{},{},{},{},{},{}];
-    var oneSet=logoItems.map(function(l){return (l&&l.image)?'<div class="logo-item"><img src="'+img(l.image)+'" alt="" loading="lazy" decoding="async" /></div>':'<div class="logo-item ph">LOGO</div>';}).join('');
+    var oneSet=logoItems.map(function(l){return (l&&l.image)?'<div class="logo-item"><img data-src="'+img(l.image)+'" alt="" decoding="async" /></div>':'<div class="logo-item ph">LOGO</div>';}).join('');
     document.getElementById('logo-track').innerHTML=oneSet+oneSet;
+    lazyLogos();
 
     const wk=d.work||{};setText('work.heading',wk.heading);
     if(Array.isArray(wk.items)){
