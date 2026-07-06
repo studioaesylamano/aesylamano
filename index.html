@@ -299,7 +299,8 @@ footer{padding:50px 0;border-top:1px solid var(--line);font-size:12px;color:var(
       document.getElementById('svc-grid').innerHTML=sv.items.map(it=>{
         const feats=(it.features||[]).map(f=>'<li>'+esc(f)+'</li>').join('');
         const ribbon=it.feature?'<span class="ribbon">Most requested</span>':'';
-        return '<a class="svc'+(it.feature?' feature':'')+'" href="/detail/?type=service&slug='+slug(it.title)+'">'+ribbon+'<span class="marker">'+esc(it.marker)+'</span><h3>'+esc(it.title)+'</h3><div class="price">'+esc(it.price)+'</div><ul>'+feats+'</ul><span class="more">View details →</span></a>';
+        const price=it.price?'<div class="price">'+esc(it.price)+'</div>':'';
+        return '<a class="svc'+(it.feature?' feature':'')+'" href="/detail/?type=service&slug='+slug(it.title)+'">'+ribbon+'<span class="marker">'+esc(it.marker)+'</span><h3>'+esc(it.title)+'</h3>'+price+'<ul>'+feats+'</ul><span class="more">View details →</span></a>';
       }).join('');
     }
 
