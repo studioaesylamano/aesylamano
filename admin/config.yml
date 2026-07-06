@@ -89,7 +89,7 @@ collections:
                 fields:
                   - { label: "Small label", name: marker, widget: string }
                   - { label: "Package name", name: title, widget: string }
-                  - { label: "Price", name: price, widget: string }
+                  - { label: "Price", name: price, widget: string, required: false }
                   - { label: "Highlight this one?", name: feature, widget: boolean, default: false }
                   - label: "What's included"
                     name: features
