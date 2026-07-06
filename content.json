@@ -190,7 +190,7 @@
       {
         "marker": "Let the world carry your brand",
         "title": "AI Production",
-        "price": "from €X,XXX",
+        "price": "",
         "feature": false,
         "features": [
           "Editorial/Campaign",
@@ -207,7 +207,7 @@
       {
         "marker": "Fracture Reality",
         "title": "Digital & Interactive",
-        "price": "from €X,XXX",
+        "price": "",
         "feature": false,
         "features": [
           "AR/VR",
@@ -223,7 +223,7 @@
       {
         "marker": "Don't reach • Be found",
         "title": "Marketing",
-        "price": "from €X,XXX",
+        "price": "",
         "feature": false,
         "features": [
           "Content Strategy",
@@ -248,30 +248,30 @@
     "right": "Sofia, BG → worldwide"
   },
   "about": {
-    "heading": "About",
-    "image": "",
+    "facts": [
+      {
+        "v": "AI film · brand · content systems",
+        "k": "Discipline"
+      },
+      {
+        "v": "Sofia, Bulgaria → worldwide",
+        "k": "Based"
+      },
+      {
+        "v": "English · Български",
+        "k": "Languages"
+      },
+      {
+        "v": "Kling · Seedance · the new frontier",
+        "k": "Tools"
+      }
+    ],
     "paragraphs": [
       "Aesyl Amano is an independent AI Production Studio based in Sofia and London.",
       "We're AI-native — film, brand systems, and content built with generative tools as the camera, the crew, and the lighting rig. That means we move fast without the work ever looking fast or cheap.",
       "Based in Sofia, working worldwide, bilingual in English and Bulgarian. Comfort as a baseline — and then we launch from it into something stranger."
     ],
-    "facts": [
-      {
-        "k": "Discipline",
-        "v": "AI film · brand · content systems"
-      },
-      {
-        "k": "Based",
-        "v": "Sofia, Bulgaria → worldwide"
-      },
-      {
-        "k": "Languages",
-        "v": "English · Български"
-      },
-      {
-        "k": "Tools",
-        "v": "Kling · Seedance · the new frontier"
-      }
-    ]
+    "image": "",
+    "heading": "About"
   }
 }
