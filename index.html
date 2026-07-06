@@ -105,6 +105,11 @@ section{padding:96px 0;border-top:1px solid var(--line);position:relative}
 .work-card p{font-size:14px;color:var(--aqua);opacity:.78}
 .work-card .bar{position:absolute;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,#4A90C9,#7BB3E8,#5ad1ff);box-shadow:0 0 14px var(--glow);transition:width .45s;z-index:2}
 .work-card:hover .bar{width:100%}
+.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;margin-top:44px}
+.video-grid:empty{display:none}
+.video{position:relative;aspect-ratio:16/9;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:#000}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-cap{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.5px;color:var(--cyan);margin-top:10px}
 .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
 .svc{border:1px solid var(--line);padding:38px 30px;display:flex;flex-direction:column;transition:.3s;background:rgba(5,11,31,.4);border-radius:3px}
 .svc:hover{border-color:var(--cyan);box-shadow:0 0 40px rgba(74,144,201,.18)}
@@ -196,6 +201,7 @@ footer{padding:50px 0;border-top:1px solid var(--line);font-size:12px;color:var(
       <div class="work-card"><div class="bar"></div><div class="ph"></div><span class="tag">CONCEPT · R&amp;D</span><h3>Specimen</h3><p>Concept work probing the line between biology and machine.</p></div>
       <div class="work-card"><div class="bar"></div><div class="ph"></div><span class="tag">IDENTITY · MOTION</span><h3>Bioluminescence</h3><p>A living identity in motion — light made from movement.</p></div>
     </div>
+    <div class="video-grid" id="video-grid"></div>
   </div>
 </section>
 
@@ -256,6 +262,7 @@ footer{padding:50px 0;border-top:1px solid var(--line);font-size:12px;color:var(
   const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   const img=p=>p?(/^https?:|^\//.test(p)?p:'/'+p.replace(/^\/+/,'')):'';
   const slug=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+  const videoEmbed=function(u){u=String(u||'');var yt=u.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);if(yt)return 'https://www.youtube.com/embed/'+yt[1];var vm=u.match(/vimeo\.com\/(?:video\/)?(\d+)/);if(vm)return 'https://player.vimeo.com/video/'+vm[1];return '';};
   function setText(key,val){document.querySelectorAll('[data-k="'+key+'"]').forEach(el=>{el.textContent=val;});}
   function lazyBg(){
     var els=document.querySelectorAll('.work-card .ph[data-bg]');
@@ -293,6 +300,10 @@ footer{padding:50px 0;border-top:1px solid var(--line);font-size:12px;color:var(
       }).join('');
       lazyBg();
     }
+
+    var vids=(d.videos&&Array.isArray(d.videos.items))?d.videos.items:[];
+    var vg=document.getElementById('video-grid');
+    if(vg){vg.innerHTML=vids.map(function(v){if(!v||!v.url)return '';var emb=videoEmbed(v.url);if(!emb)return '';return '<div class="video-item"><div class="video"><iframe src="'+emb+'" title="'+esc(v.title||'')+'" loading="lazy" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>'+(v.title?'<div class="video-cap">'+esc(v.title)+'</div>':'')+'</div>';}).join('');}
 
     const sv=d.services||{};setText('services.heading',sv.heading);
     if(Array.isArray(sv.items)){
