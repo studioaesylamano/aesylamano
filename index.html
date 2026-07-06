@@ -132,6 +132,17 @@ a.work-card:hover .more,a.svc:hover .more{opacity:1;color:var(--glow);transform:
 .contact .lede{color:var(--dim);max-width:540px;margin:0 auto 40px;font-size:18px}
 .mail{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:clamp(22px,4.5vw,40px);text-decoration:none;color:var(--aqua);border-bottom:2px solid var(--cyan);padding-bottom:5px;transition:.25s}
 .mail:hover{color:#fff;border-color:var(--glow);text-shadow:0 0 24px rgba(90,209,255,.5)}
+.wl-form{max-width:520px;margin:10px auto 0;text-align:left;display:grid;gap:16px}
+.wl-field label{display:block;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--cyan);margin-bottom:7px}
+.wl-field input{width:100%;background:rgba(5,11,31,.6);border:1px solid var(--line);border-radius:3px;padding:13px 15px;color:#dCEaFb;font-family:"Inter",sans-serif;font-size:15px;transition:.2s}
+.wl-field input:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 24px rgba(74,144,201,.25);background:rgba(5,11,31,.9)}
+.wl-field input::placeholder{color:var(--dim);opacity:.6}
+.wl-submit{margin-top:8px;width:100%;padding:16px;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;font-family:"Space Grotesk",sans-serif;font-weight:600;border:1px solid var(--cyan);background:var(--cyan);color:#02040f;border-radius:2px;cursor:pointer;transition:.25s;box-shadow:0 0 30px rgba(74,144,201,.4)}
+.wl-submit:hover{background:var(--sky);box-shadow:0 0 44px rgba(90,209,255,.6)}
+.wl-submit:disabled{opacity:.5;cursor:default;box-shadow:none}
+.wl-msg{margin-top:6px;font-size:15px;min-height:22px;text-align:center}
+.wl-msg.ok{color:var(--acid)}
+.wl-msg.err{color:#ff8f8f}
 footer{padding:50px 0;border-top:1px solid var(--line);font-size:12px;color:var(--dim)}
 .footer-in{display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:12px}
 .footer-in .mono{font-family:"JetBrains Mono",monospace}
@@ -220,9 +231,17 @@ footer{padding:50px 0;border-top:1px solid var(--line);font-size:12px;color:var(
 <section id="contact" class="contact">
   <div class="wrap">
     <span class="depth" style="left:28px">−11000m · the trench</span>
-    <div class="sec-head" style="justify-content:center"><span class="sec-num">03</span><h2 class="display glow" data-k="contact.heading" style="text-align:center">Surface something stranger.</h2></div>
-    <p class="lede" data-k="contact.lede">Tell us what you're launching. We'll tell you the fastest honest way to make it good.</p>
-    <a href="mailto:hello@aesylamano.com" class="mail" id="contact-mail">hello@aesylamano.com</a>
+    <div class="sec-head" style="justify-content:center"><span class="sec-num">03</span><h2 class="display glow" data-k="contact.heading" style="text-align:center">Join the Waitlist</h2></div>
+    <p class="lede" data-k="contact.lede">Be first to know when we open. Tell us a little about you.</p>
+    <form class="wl-form" id="wl-form" novalidate>
+      <div class="wl-field"><label for="wl-name">Name</label><input id="wl-name" name="name" type="text" required autocomplete="name" placeholder="Your full name" /></div>
+      <div class="wl-field"><label for="wl-position">Position in company</label><input id="wl-position" name="position" type="text" required autocomplete="organization-title" placeholder="e.g. Marketing Director" /></div>
+      <div class="wl-field"><label for="wl-company">Company name</label><input id="wl-company" name="company" type="text" required autocomplete="organization" placeholder="Your company" /></div>
+      <div class="wl-field"><label for="wl-link">Website or social link</label><input id="wl-link" name="link" type="text" required placeholder="https://…" /></div>
+      <div class="wl-field"><label for="wl-email">Email address</label><input id="wl-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com" /></div>
+      <button type="submit" class="wl-submit" id="wl-submit">Join the Waitlist</button>
+      <p class="wl-msg" id="wl-msg" role="status" aria-live="polite"></p>
+    </form>
   </div>
 </section>
 
@@ -316,7 +335,7 @@ footer{padding:50px 0;border-top:1px solid var(--line);font-size:12px;color:var(
     }
 
     const ct=d.contact||{};setText('contact.heading',ct.heading);setText('contact.lede',ct.lede);
-    if(ct.email){const ml=document.getElementById('contact-mail');ml.textContent=ct.email;ml.setAttribute('href','mailto:'+ct.email);}
+    if(ct.email){window.__contactEmail=ct.email;}
 
     const ft=d.footer||{};setText('footer.left',ft.left);setText('footer.right',ft.right);
 
@@ -326,6 +345,37 @@ footer{padding:50px 0;border-top:1px solid var(--line);font-size:12px;color:var(
       if(u){a.setAttribute('href',u);a.style.display='inline-flex';}else{a.style.display='none';}
     });
   }).catch(()=>{/* keep built-in defaults if content.json is missing */});
+})();
+
+/* ===== waitlist form ===== */
+(function(){
+  /* Paste your Google Apps Script Web App /exec URL between the quotes to store
+     signups automatically in your sheet. Until then, the form falls back to
+     opening the visitor's email app addressed to you. */
+  var WAITLIST_ENDPOINT="";
+  var f=document.getElementById('wl-form'); if(!f)return;
+  var msg=document.getElementById('wl-msg'), btn=document.getElementById('wl-submit');
+  var keys=['name','position','company','link','email'];
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    msg.className='wl-msg';msg.textContent='';
+    if(!f.checkValidity()){msg.className='wl-msg err';msg.textContent='Please fill in every field.';f.reportValidity();return;}
+    var vals={};keys.forEach(function(k){vals[k]=f.elements[k].value.trim();});
+    if(!WAITLIST_ENDPOINT){
+      var to=window.__contactEmail||'studio@aesylamano.com';
+      var body='Name: '+vals.name+'\nPosition: '+vals.position+'\nCompany: '+vals.company+'\nLink: '+vals.link+'\nEmail: '+vals.email;
+      window.location.href='mailto:'+to+'?subject='+encodeURIComponent('Waitlist signup — '+vals.name)+'&body='+encodeURIComponent(body);
+      msg.className='wl-msg ok';msg.textContent='Opening your email app to finish…';
+      return;
+    }
+    btn.disabled=true;var old=btn.textContent;btn.textContent='Sending…';
+    var data=new URLSearchParams();keys.forEach(function(k){data.append(k,vals[k]);});data.append('_source','waitlist');
+    fetch(WAITLIST_ENDPOINT,{method:'POST',body:data}).then(function(r){return r.ok?r:Promise.reject();}).then(function(){
+      f.reset();msg.className='wl-msg ok';msg.textContent="You're on the list. We'll be in touch.";btn.textContent=old;btn.disabled=false;
+    }).catch(function(){
+      msg.className='wl-msg err';msg.textContent='Something went wrong — please try again in a moment.';btn.textContent=old;btn.disabled=false;
+    });
+  });
 })();
 
 /* ===== deter casual image saving (not foolproof — browsers must load images to show them) ===== */
