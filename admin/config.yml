@@ -77,6 +77,19 @@ collections:
                     required: false
                     field: { label: "Photo", name: image, widget: image }
 
+          - label: "Videos (under Selected work)"
+            name: videos
+            widget: object
+            fields:
+              - label: "Videos"
+                name: items
+                widget: list
+                summary: "{{fields.title}}"
+                label_singular: "Video"
+                fields:
+                  - { label: "Title (optional)", name: title, widget: string, required: false }
+                  - { label: "YouTube or Vimeo link", name: url, widget: string }
+
           - label: "Services & pricing"
             name: services
             widget: object
