@@ -412,8 +412,11 @@ footer{padding:50px 0;border-top:1px solid var(--line);font-size:12px;color:var(
   var lb=document.getElementById('vlb'),slot=document.getElementById('vlb-slot'),closeBtn=document.getElementById('vlb-close');
   if(!lb||!slot)return;
   function open(embed){
+    var params='autoplay=1&loop=1';
+    var ytm=embed.match(/youtube\.com\/embed\/([A-Za-z0-9_-]{11})/);
+    if(ytm){params+='&playlist='+ytm[1];}
     var sep=embed.indexOf('?')>-1?'&':'?';
-    slot.innerHTML='<iframe src="'+embed+sep+'autoplay=1" title="Video" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;fullscreen" allowfullscreen></iframe>';
+    slot.innerHTML='<iframe src="'+embed+sep+params+'" title="Video" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;fullscreen" allowfullscreen></iframe>';
     lb.classList.add('open');document.body.style.overflow='hidden';
   }
   function close(){lb.classList.remove('open');slot.innerHTML='';document.body.style.overflow='';}
