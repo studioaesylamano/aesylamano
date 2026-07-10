@@ -361,11 +361,26 @@ footer{padding:50px 0;border-top:1px solid var(--line);font-size:12px;color:var(
         var poster=m.thumb?'<img src="'+m.thumb+'" alt="'+esc(v.title||'')+'" loading="lazy" decoding="async" />':'<img alt="'+esc(v.title||'')+'" loading="lazy" decoding="async" style="opacity:0" />';
         return '<div class="video-item" data-embed="'+esc(m.embed)+'"'+(m.vimeo?' data-vimeo="'+m.vimeo+'"':'')+' role="button" tabindex="0" aria-label="Play '+esc(v.title||'video')+'"><div class="video-poster">'+poster+'<span class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>'+(v.title?'<div class="video-cap">'+esc(v.title)+'</div>':'')+'</div>';
       }).join('');
-      vg.querySelectorAll('.video-item[data-vimeo]').forEach(function(item){
+      vg.querySelectorAll('.video-item[data-vimeo]').forEach(function(item,idx){
         var id=item.getAttribute('data-vimeo');
-        fetch('https://vimeo.com/api/oembed.json?url=https%3A%2F%2Fvimeo.com%2F'+id+'&width=800').then(function(r){return r.ok?r.json():Promise.reject();}).then(function(j){
-          if(j&&j.thumbnail_url){var im=item.querySelector('img');if(im){im.onload=function(){im.style.opacity='';};im.src=j.thumbnail_url;}}
-        }).catch(function(){});
+        var im=item.querySelector('img');
+        function setThumb(url){
+          if(!im)return;
+          im.onload=function(){im.style.opacity='';};
+          im.onerror=function(){im.onerror=null;setTimeout(function(){im.src=url+(url.indexOf('?')>-1?'&':'?')+'cb='+Date.now();},1500);};
+          im.src=url;
+        }
+        function viaNoembed(){
+          fetch('https://noembed.com/embed?url=https://vimeo.com/'+id).then(function(r){return r.ok?r.json():Promise.reject();}).then(function(j){if(j&&j.thumbnail_url)setThumb(j.thumbnail_url);}).catch(function(){});
+        }
+        function tryFetch(attempt){
+          fetch('https://vimeo.com/api/oembed.json?url=https%3A%2F%2Fvimeo.com%2F'+id+'&width=800').then(function(r){return r.ok?r.json():Promise.reject();}).then(function(j){
+            if(j&&j.thumbnail_url){setThumb(j.thumbnail_url);}else{return Promise.reject();}
+          }).catch(function(){
+            if(attempt<3){setTimeout(function(){tryFetch(attempt+1);},700*(attempt+1));}else{viaNoembed();}
+          });
+        }
+        setTimeout(function(){tryFetch(0);},idx*120);
       });
     }
 
