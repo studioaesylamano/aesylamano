@@ -77,10 +77,11 @@ collections:
                     required: false
                     field: { label: "Photo", name: image, widget: image }
 
-          - label: "Videos (under Selected work)"
+          - label: "Video library (own section)"
             name: videos
             widget: object
             fields:
+              - { label: "Section heading", name: heading, widget: string, required: false }
               - label: "Videos"
                 name: items
                 widget: list
