@@ -181,6 +181,35 @@
           "/images/AesylAmano55.webp",
           "/images/AesylAmano54.webp"
         ]
+      },
+      {
+        "tag": "Kitchen & Living Room",
+        "title": "S-Gifts Home",
+        "desc": "",
+        "image": "/images/AesylAmano_new.webp",
+        "detail": "",
+        "gallery": [
+          "/images/001_Knife Set.webp",
+          "/images/002_Knife Set.webp",
+          "/images/003_Knife Set.webp",
+          "/images/004_Knife Set.webp",
+          "/images/551_Knife Set.webp",
+          "/images/552_Knife Set.webp",
+          "/images/553_Knife Set.webp",
+          "/images/554_Knife Set.webp",
+          "/images/hf_20260630_114317_4141f935-50e0-4341-ae8e-7f03f1457c43.webp",
+          "/images/hf_20260630_132741_bfda4148-9224-48c0-b87d-12a9d165f27f.webp",
+          "/images/hf_20260630_151123_c0516451-dc67-476e-84d2-d371f65f8879.webp",
+          "/images/hf_20260630_114610_5c89d67d-17f6-49e7-8cec-546bcb96cf52.webp",
+          "/images/hf_20260630_132733_902d7e18-14a2-44e2-9aaf-9ee9054ee4ba.webp",
+          "/images/hf_20260630_143441_db45ed16-5c72-44ed-9455-9dcb8296242e.webp",
+          "/images/001_LAMP.webp",
+          "/images/002_LAMP.webp",
+          "/images/003_LAMP.webp",
+          "/images/111_LAMP.webp",
+          "/images/112_LAMP.webp",
+          "/images/113_LAMP.webp"
+        ]
       }
     ]
   },
@@ -301,30 +330,30 @@
     "right": "Sofia, BG → worldwide"
   },
   "about": {
-    "heading": "About",
-    "image": "",
+    "facts": [
+      {
+        "v": "AI film · brand · content systems",
+        "k": "Discipline"
+      },
+      {
+        "v": "Sofia, Bulgaria → worldwide",
+        "k": "Based"
+      },
+      {
+        "v": "English · Български",
+        "k": "Languages"
+      },
+      {
+        "v": "Kling · Seedance · the new frontier",
+        "k": "Tools"
+      }
+    ],
     "paragraphs": [
       "Aesyl Amano is an independent AI Production Studio based in Sofia and London.",
       "We're AI-native — film, brand systems, and content built with generative tools as the camera, the crew, and the lighting rig. That means we move fast without the work ever looking fast or cheap.",
       "Based in Sofia, working worldwide, bilingual in English and Bulgarian. Comfort as a baseline — and then we launch from it into something stranger."
     ],
-    "facts": [
-      {
-        "k": "Discipline",
-        "v": "AI film · brand · content systems"
-      },
-      {
-        "k": "Based",
-        "v": "Sofia, Bulgaria → worldwide"
-      },
-      {
-        "k": "Languages",
-        "v": "English · Български"
-      },
-      {
-        "k": "Tools",
-        "v": "Kling · Seedance · the new frontier"
-      }
-    ]
+    "image": "",
+    "heading": "About"
   }
 }
