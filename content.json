@@ -3,7 +3,7 @@
   "seoDescription": "Aesyl Amano is an AI production studio designing editorial fashion campaigns, brand films, characters and immersive environments with uncanny precision.",
   "hero": {
     "marker": "Ethereal & Spectral · −0m",
-    "headline": "Full-Service AI Creative Studio",
+    "headline": "AI Creative Studio",
     "lede": "We build visual identity, campaign imagery, brand film, and intelligent content systems using generative tools powered by human creative direction. Every element curated and customised to fit the brief and deliver uncanny realism.",
     "cta1": "See the work",
     "cta2": "Start a project",
@@ -209,6 +209,26 @@
           "/images/111_LAMP.webp",
           "/images/112_LAMP.webp",
           "/images/113_LAMP.webp"
+        ]
+      },
+      {
+        "tag": "Artisan textile design",
+        "title": "Pokrivki.bg Home",
+        "desc": "",
+        "image": "",
+        "detail": "",
+        "gallery": [
+          "/images/hf_20260117_185734_8d3af411-2a6f-41ef-96f0-4730d83d6d9f.webp",
+          "/images/hf_20260117_200141_601f4254-0a9f-4f7a-875d-c9f8249986f8.webp",
+          "/images/hf_20260117_201349_d1b2f579-f6f3-469b-b2e3-b488046dec62.webp",
+          "/images/hf_20260123_111210_df46fdda-d4cc-4f82-b5c5-5e1e93e5cf6c.webp",
+          "/images/hf_20260123_110638_3e699ca6-07c5-43ad-9858-7ee3c81624f8.webp",
+          "/images/hf_20260123_114014_da5335fd-0acc-4dcb-bfa1-c006b2ae4174.webp",
+          "/images/hf_20260123_120419_d7f81f9a-75a5-475e-b496-53cbff747582.webp",
+          "/images/977ca7dc-5be5-40cd-af03-bddb9da6668b.webp",
+          "/images/9ee55ab8-3bd5-4fa3-ab69-fa56312e75c9.webp",
+          "/images/hf_20260117_173809_7ba2ecbb-a1b7-4a6c-b96e-69e5448e0947.webp",
+          "/images/hf_20260117_181606_f770e2af-b603-4d71-90aa-efa0aba036b8.webp"
         ]
       }
     ]
