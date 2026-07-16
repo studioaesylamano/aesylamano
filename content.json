@@ -86,9 +86,7 @@
           "/images/AesylAmano4.webp",
           "/images/AesylAmano5.webp",
           "/images/AesylAmano6.webp",
-          "/images/AesylAmano7.webp",
-          "/images/AesylAmano39.webp",
-          "/images/AesylAmano40.webp"
+          "/images/AesylAmano7.webp"
         ]
       },
       {
@@ -103,12 +101,7 @@
           "/images/AesylAmano12.webp",
           "/images/AesylAmano11.webp",
           "/images/AesylAmano10.webp",
-          "/images/AesylAmano14.webp",
-          "/images/AesylAmano33.webp",
-          "/images/AesylAmano34.webp",
-          "/images/AesylAmano35.webp",
-          "/images/AesylAmano36.webp",
-          "/images/AesylAmano37.webp"
+          "/images/AesylAmano14.webp"
         ]
       },
       {
@@ -121,29 +114,23 @@
           "/images/AesylAmano16.webp",
           "/images/AesylAmano17.webp",
           "/images/AesylAmano18.webp",
-          "/images/AesylAmano19.webp",
-          "/images/AesylAmano38.webp"
+          "/images/AesylAmano19.webp"
         ]
       },
       {
-        "tag": "Interior Visualisation",
+        "tag": "Campaign for Pokrivki.bg",
         "title": "Family Home",
         "desc": "",
         "image": "/images/AesylAmano21.webp",
         "detail": "",
         "gallery": [
-          "/images/AesylAmano21.webp",
           "/images/AesylAmano22.webp",
           "/images/AesylAmano23.webp",
           "/images/AesylAmano24.webp",
           "/images/AesylAmano25.webp",
           "/images/AesylAmano26.webp",
           "/images/AesylAmano28.webp",
-          "/images/AesylAmano27.webp",
-          "/images/AesylAmano29.webp",
-          "/images/AesylAmano30.webp",
-          "/images/AesylAmano31.webp",
-          "/images/AesylAmano32.webp"
+          "/images/AesylAmano27.webp"
         ]
       },
       {
@@ -234,8 +221,8 @@
         ]
       },
       {
-        "tag": "Environment Visualisation",
-        "title": "Capri Series",
+        "tag": "Interior/Exterior Visualisation",
+        "title": "Campaigns",
         "desc": "",
         "image": "/images/AesylAmano57.webp",
         "detail": "",
@@ -248,7 +235,19 @@
           "/images/AesylAmano52.webp",
           "/images/AesylAmano53.webp",
           "/images/AesylAmano55.webp",
-          "/images/AesylAmano54.webp"
+          "/images/AesylAmano54.webp",
+          "/images/AesylAmano33.webp",
+          "/images/AesylAmano34.webp",
+          "/images/AesylAmano35.webp",
+          "/images/AesylAmano36.webp",
+          "/images/AesylAmano37.webp",
+          "/images/AesylAmano38.webp",
+          "/images/AesylAmano40.webp",
+          "/images/AesylAmano39.webp",
+          "/images/AesylAmano29.webp",
+          "/images/AesylAmano30.webp",
+          "/images/AesylAmano31.webp",
+          "/images/AesylAmano32.webp"
         ]
       }
     ]
