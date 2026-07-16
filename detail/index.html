@@ -15,7 +15,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 img{-webkit-user-drag:none;-moz-user-drag:none;user-drag:none;-webkit-touch-callout:none}
 html{scroll-behavior:smooth}
-body{background:var(--abyss);color:var(--text);font-family:"Inter",system-ui,sans-serif;font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;min-height:100vh}
+body{background:var(--abyss);color:var(--text);font-family:"Inter",system-ui,sans-serif;font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;min-height:100vh;overflow-x:hidden}
 body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(120% 60% at 50% -10%,rgba(90,209,255,.16),transparent 55%),linear-gradient(180deg,#071633,#050b1f 30%,#02040f 75%)}
 header.bar{position:sticky;top:0;z-index:50;background:rgba(2,4,15,.6);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .bar-in{max-width:880px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:64px}
@@ -25,7 +25,8 @@ header.bar{position:sticky;top:0;z-index:50;background:rgba(2,4,15,.6);backdrop-
 main{max-width:880px;margin:0 auto;padding:70px 28px 120px}
 .edge{height:3px;width:100%;background:linear-gradient(90deg,#050816,#0A0E27,#1E3A6F,#4A90C9,#7BB3E8,#B8D4F1)}
 .tag{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);display:block;margin-bottom:18px}
-.hero-img{width:100%;height:auto;border-radius:5px;margin:0 0 36px;display:block}
+.hero-img{width:100vw;margin-left:calc(50% - 50vw);height:min(62vh,640px);object-fit:cover;object-position:center;display:block;margin-top:-70px;margin-bottom:42px}
+@media(max-width:600px){.hero-img{height:52vh;margin-top:-70px}}
 .price{font-family:"JetBrains Mono",monospace;font-size:17px;color:var(--sky);margin:8px 0 30px}
 article h1{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:clamp(36px,7vw,68px);line-height:1.02;letter-spacing:-.02em;color:#dCEaFb;margin-bottom:28px;text-shadow:0 0 24px rgba(90,209,255,.35)}
 article h2{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:30px;color:#dCEaFb;margin:8px 0 18px}
@@ -106,8 +107,8 @@ body.lyton #lyt{display:flex;position:fixed;bottom:18px;left:50%;transform:trans
     if(!it){el.innerHTML='<p class="err">Not found. <a href="/" style="color:var(--glow)">Back to home</a></p>';return;}
     document.title=it.title+' — Aesyl Amano';
     let html='';
+    if(it.image){html+='<img class="hero-img" src="'+encodeURI(img(it.image))+'" alt="'+esc(it.title)+'" decoding="async" />';}
     html+='<span class="tag">'+esc(it.tag||it.marker||'')+'</span>';
-    if(it.image){html+='<img class="hero-img" src="'+img(it.image)+'" alt="'+esc(it.title)+'" decoding="async" />';}
     if(type==='service'&&it.price){/* price shown after heading via detail; also show here */}
     // detail markdown (already contains its own H2 heading)
     html+=marked.parse(it.detail||('## '+(it.title||'')+'\n\n'+(it.desc||'')));
