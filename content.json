@@ -147,6 +147,25 @@
         ]
       },
       {
+        "tag": "Digital Twin",
+        "title": "Jenny Shen",
+        "desc": "",
+        "image": "/images/hf_20260507_132932_3eca1b33-fa91-495e-bff5-56c718a21072.webp",
+        "detail": "",
+        "gallery": [
+          "/images/hf_20260427_180826_d39f3012-52f6-4970-b700-b3e5cf506e6c.webp",
+          "/images/hf_20260427_181505_b11f70d1-0b69-4afe-b66f-d0c59ba1092c.webp",
+          "/images/hf_20260513_122452_6a1b2c4e-9fe7-4502-8725-6fe7be9632ff.webp",
+          "/images/hf_20260513_122934_6326010a-9e49-4b16-b281-29c8d7b1e9c0.webp",
+          "/images/hf_20260513_123352_657cc577-6aa0-472a-ba94-01739e709dd7.webp",
+          "/images/hf_20260427_181208_fafd39fd-0fcc-47fd-969f-2ac744a51679.webp",
+          "/images/hf_20260427_181207_496a0eae-933b-4ba6-b943-68bbdeb81c2b.webp",
+          "/images/hf_20260427_180826_05432081-de64-4316-aa89-28a1338240ab.webp",
+          "/images/hf_20260427_180826_ad6e3277-6196-4fa4-85e3-1a757a0aad87.webp",
+          "/images/hf_20260427_180825_5526adc4-c370-446e-9a43-564023915226.webp"
+        ]
+      },
+      {
         "tag": "Editorial",
         "title": "Dark Fantasy",
         "desc": "",
@@ -162,24 +181,6 @@
           "/images/AesylAmano42.webp",
           "/images/AesylAmano41.webp",
           "/images/AesylAmano43.webp"
-        ]
-      },
-      {
-        "tag": "Environment Visualisation",
-        "title": "Capri Series",
-        "desc": "",
-        "image": "/images/AesylAmano57.webp",
-        "detail": "",
-        "gallery": [
-          "/images/AesylAmano56.webp",
-          "/images/AesylAmano58.webp",
-          "/images/AesylAmano59.webp",
-          "/images/AesylAmano60.webp",
-          "/images/AesylAmano51.webp",
-          "/images/AesylAmano52.webp",
-          "/images/AesylAmano53.webp",
-          "/images/AesylAmano55.webp",
-          "/images/AesylAmano54.webp"
         ]
       },
       {
@@ -233,22 +234,21 @@
         ]
       },
       {
-        "tag": "Digital Twins",
-        "title": "Jenny Shen",
+        "tag": "Environment Visualisation",
+        "title": "Capri Series",
         "desc": "",
-        "image": "/images/hf_20260507_132932_3eca1b33-fa91-495e-bff5-56c718a21072.webp",
+        "image": "/images/AesylAmano57.webp",
         "detail": "",
         "gallery": [
-          "/images/hf_20260427_180826_d39f3012-52f6-4970-b700-b3e5cf506e6c.webp",
-          "/images/hf_20260427_181505_b11f70d1-0b69-4afe-b66f-d0c59ba1092c.webp",
-          "/images/hf_20260513_122452_6a1b2c4e-9fe7-4502-8725-6fe7be9632ff.webp",
-          "/images/hf_20260513_122934_6326010a-9e49-4b16-b281-29c8d7b1e9c0.webp",
-          "/images/hf_20260513_123352_657cc577-6aa0-472a-ba94-01739e709dd7.webp",
-          "/images/hf_20260427_181208_fafd39fd-0fcc-47fd-969f-2ac744a51679.webp",
-          "/images/hf_20260427_181207_496a0eae-933b-4ba6-b943-68bbdeb81c2b.webp",
-          "/images/hf_20260427_180826_05432081-de64-4316-aa89-28a1338240ab.webp",
-          "/images/hf_20260427_180826_ad6e3277-6196-4fa4-85e3-1a757a0aad87.webp",
-          "/images/hf_20260427_180825_5526adc4-c370-446e-9a43-564023915226.webp"
+          "/images/AesylAmano56.webp",
+          "/images/AesylAmano58.webp",
+          "/images/AesylAmano59.webp",
+          "/images/AesylAmano60.webp",
+          "/images/AesylAmano51.webp",
+          "/images/AesylAmano52.webp",
+          "/images/AesylAmano53.webp",
+          "/images/AesylAmano55.webp",
+          "/images/AesylAmano54.webp"
         ]
       }
     ]
