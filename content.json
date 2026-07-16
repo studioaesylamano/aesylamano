@@ -126,8 +126,8 @@
         ]
       },
       {
-        "tag": "Interior Visualisation for Pokrivki.bg",
-        "title": "Family Home",
+        "tag": "Interior Visualisation",
+        "title": "Pokrivki.bg Family Home",
         "desc": "",
         "image": "/images/AesylAmano21.webp",
         "detail": "",
@@ -215,7 +215,7 @@
         "tag": "Product Photography",
         "title": "Pokrivki.bg Home",
         "desc": "",
-        "image": "/images/Untitled design (9).jpg",
+        "image": "/images/Untitled design (9).webp",
         "detail": "",
         "gallery": [
           "/images/hf_20260117_185734_8d3af411-2a6f-41ef-96f0-4730d83d6d9f.webp",
@@ -236,19 +236,19 @@
         "tag": "Digital Twins",
         "title": "Jenny Shen",
         "desc": "",
-        "image": "/images/hf_20260507_132932_3eca1b33-fa91-495e-bff5-56c718a21072.png",
+        "image": "/images/hf_20260507_132932_3eca1b33-fa91-495e-bff5-56c718a21072.webp",
         "detail": "",
         "gallery": [
-          "/images/hf_20260427_180826_d39f3012-52f6-4970-b700-b3e5cf506e6c.png",
-          "/images/hf_20260427_181505_b11f70d1-0b69-4afe-b66f-d0c59ba1092c.png",
-          "/images/hf_20260513_122452_6a1b2c4e-9fe7-4502-8725-6fe7be9632ff.png",
-          "/images/hf_20260513_122934_6326010a-9e49-4b16-b281-29c8d7b1e9c0.png",
-          "/images/hf_20260513_123352_657cc577-6aa0-472a-ba94-01739e709dd7.png",
-          "/images/hf_20260427_180826_05432081-de64-4316-aa89-28a1338240ab.png",
-          "/images/hf_20260427_180826_ad6e3277-6196-4fa4-85e3-1a757a0aad87.png",
-          "/images/hf_20260427_180825_5526adc4-c370-446e-9a43-564023915226.png",
-          "/images/hf_20260518_162904_30e5806d-f102-495c-9f52-50d1043da46b.png",
-          "/images/hf_20260518_163041_69c8859f-95fe-44d2-861b-402f08353101.png"
+          "/images/hf_20260427_180826_d39f3012-52f6-4970-b700-b3e5cf506e6c.webp",
+          "/images/hf_20260427_181505_b11f70d1-0b69-4afe-b66f-d0c59ba1092c.webp",
+          "/images/hf_20260513_122452_6a1b2c4e-9fe7-4502-8725-6fe7be9632ff.webp",
+          "/images/hf_20260513_122934_6326010a-9e49-4b16-b281-29c8d7b1e9c0.webp",
+          "/images/hf_20260513_123352_657cc577-6aa0-472a-ba94-01739e709dd7.webp",
+          "/images/hf_20260427_181208_fafd39fd-0fcc-47fd-969f-2ac744a51679.webp",
+          "/images/hf_20260427_181207_496a0eae-933b-4ba6-b943-68bbdeb81c2b.webp",
+          "/images/hf_20260427_180826_05432081-de64-4316-aa89-28a1338240ab.webp",
+          "/images/hf_20260427_180826_ad6e3277-6196-4fa4-85e3-1a757a0aad87.webp",
+          "/images/hf_20260427_180825_5526adc4-c370-446e-9a43-564023915226.webp"
         ]
       }
     ]
