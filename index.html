@@ -25,14 +25,38 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Aesyl Amano",
-  "alternateName": "Studio Amano",
-  "url": "https://aesylamano.com",
-  "description": "AI-native creative studio in Sofia and London producing editorial campaigns, brand films, product photography and content systems.",
-  "email": "studio@aesylamano.com",
-  "knowsLanguage": ["en", "bg"],
-  "sameAs": []
+  "@graph": [
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": "https://aesylamano.com/#org",
+      "name": "Aesyl Amano",
+      "alternateName": "Studio Amano",
+      "url": "https://aesylamano.com",
+      "email": "studio@aesylamano.com",
+      "description": "AI-native creative and production studio in Sofia and London producing editorial campaigns, brand films, product photography, digital twins and intelligent content systems with uncanny realism.",
+      "knowsLanguage": ["en", "bg"],
+      "areaServed": "Worldwide",
+      "slogan": "AI Creative Studio for film, brand and content",
+      "location": [
+        { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Sofia", "addressCountry": "BG" } },
+        { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" } }
+      ],
+      "makesOffer": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Production", "description": "Editorial & campaign visuals, brand films & commercials, product photography, music & SFX, prompt & systems engineering, advertising/UGC, digital twins, interior & space visualisation." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital & Interactive", "description": "AR/VR brand experiences, holographic events & 3D mapping, virtual try-on & shoppable video, live AI avatars, custom GPTs & private knowledge bases, customer-support agents, internal automation." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Marketing", "description": "Content strategy & subscription, dynamic creative optimisation, hyper-personalised campaigns, multi-market localisation, social media management, programmatic SEO, workshops." } }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://aesylamano.com/#website",
+      "url": "https://aesylamano.com",
+      "name": "Aesyl Amano",
+      "description": "AI-native creative studio in Sofia & London — film, brand and content.",
+      "publisher": { "@id": "https://aesylamano.com/#org" },
+      "inLanguage": "en"
+    }
+  ]
 }
 </script>
 
@@ -200,8 +224,8 @@ footer{padding:50px 0;border-top:1px solid var(--line);font-size:12px;color:var(
   <div class="hero-bg" id="hero-bg"></div>
   <div class="wrap">
     <span class="marker" data-k="hero.marker">Ethereal &amp; Spectral · −0m</span>
-    <h1 class="display glow" data-k="hero.headline">From the depths, something stranger.</h1>
-    <p class="lede" data-k="hero.lede">Aesyl Amano is an AI-native film and brand studio. We make work that's luminous, uncanny, and considered — surfaced from somewhere deeper than the brief.</p>
+    <h1 class="display glow" data-k="hero.headline">AI Creative Studio</h1>
+    <p class="lede" data-k="hero.lede">Aesyl Amano is an AI-native creative studio in Sofia &amp; London. We build visual identity, campaign imagery, brand film, and intelligent content systems with generative tools under human creative direction — delivering uncanny realism.</p>
     <div class="cta-row">
       <a href="#work" class="btn solid" data-k="hero.cta1">See the work</a>
       <a href="#contact" class="btn ghost" data-k="hero.cta2">Start a project</a>

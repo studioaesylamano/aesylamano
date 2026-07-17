@@ -1,0 +1,19 @@
+# Aesyl Amano
+
+> Aesyl Amano (Studio Amano) is an AI-native creative and production studio based in Sofia, Bulgaria and London, UK, working worldwide. We produce editorial and campaign visuals, brand films, product photography, digital twins, immersive and interactive experiences, and intelligent content systems — built with generative AI under human creative direction, with uncanny, cinematic realism.
+
+## What we do
+- **AI Production** — editorial & campaign visuals (4K/8K), brand films & commercials, product photography, music & SFX, prompt & systems engineering, advertising/UGC, digital twins & brand ambassadors, interior & space visualisation.
+- **Digital & Interactive** — AR/VR brand experiences, holographic events & 3D mapping, virtual try-on & shoppable video, live AI avatars, custom GPTs & private knowledge bases, customer-support agents, internal automation.
+- **Marketing** — content strategy & subscription, dynamic creative optimisation, hyper-personalised campaigns, multi-market localisation, social media management, programmatic SEO, workshops & team enablement.
+
+## Studio facts
+- Name: Aesyl Amano (also Studio Amano)
+- Based: Sofia, Bulgaria and London, UK — working worldwide
+- Languages: English, Bulgarian
+- Tools: Kling, Seedance and the generative frontier
+- Contact: studio@aesylamano.com
+- Website: https://aesylamano.com
+
+## Contact
+Join the waitlist or start a project at https://aesylamano.com
