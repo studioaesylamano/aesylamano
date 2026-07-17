@@ -477,7 +477,8 @@ footer{padding:50px 0;border-top:1px solid var(--line);font-size:12px;color:var(
   /* Paste your Google Apps Script Web App /exec URL between the quotes to store
      signups automatically in your sheet. Until then, the form falls back to
      opening the visitor's email app addressed to you. */
-  var WAITLIST_ENDPOINT="";
+  var WAITLIST_ENDPOINT="https://api.web3forms.com/submit";
+  var WAITLIST_KEY="b8c277dc-a7ac-4f0a-8a89-c87621e38c8b";
   var f=document.getElementById('wl-form'); if(!f)return;
   var msg=document.getElementById('wl-msg'), btn=document.getElementById('wl-submit');
   var keys=['name','position','company','link','email'];
@@ -494,7 +495,11 @@ footer{padding:50px 0;border-top:1px solid var(--line);font-size:12px;color:var(
       return;
     }
     btn.disabled=true;var old=btn.textContent;btn.textContent='Sending…';
-    var data=new URLSearchParams();keys.forEach(function(k){data.append(k,vals[k]);});data.append('_source','waitlist');
+    var data=new URLSearchParams();keys.forEach(function(k){data.append(k,vals[k]);});
+    data.append('access_key',WAITLIST_KEY);
+    data.append('subject','New waitlist signup — '+vals.name);
+    data.append('from_name','Aesyl Amano Waitlist');
+    data.append('botcheck','');
     fetch(WAITLIST_ENDPOINT,{method:'POST',body:data}).then(function(r){return r.ok?r:Promise.reject();}).then(function(){
       f.reset();msg.className='wl-msg ok';msg.textContent="You're on the list. We'll be in touch.";btn.textContent=old;btn.disabled=false;
     }).catch(function(){
