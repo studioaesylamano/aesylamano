@@ -63,6 +63,9 @@
 <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;△&lt;/text&gt;&lt;/svg&gt;" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" href="/content.json" as="fetch" crossorigin="anonymous" />
+<link rel="preconnect" href="https://i.vimeocdn.com" crossorigin />
+<link rel="dns-prefetch" href="https://player.vimeo.com" />
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
 
@@ -352,7 +355,7 @@ footer{padding:50px 0;border-top:1px solid var(--line);font-size:12px;color:var(
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){load();io.disconnect();}});},{rootMargin:'300px'});
     io.observe(strip);
   }
-  fetch('content.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(d=>{
+  fetch('content.json').then(r=>r.ok?r.json():Promise.reject()).then(d=>{
     if(d.seoTitle){document.title=d.seoTitle;}
     if(d.seoDescription){const m=document.querySelector('meta[name=description]');if(m)m.setAttribute('content',d.seoDescription);}
     const h=d.hero||{};

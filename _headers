@@ -1,5 +1,11 @@
 /*
+  Cache-Control: public, max-age=60, stale-while-revalidate=86400
+
+/content.json
   Cache-Control: no-store, must-revalidate
 
+/admin/*
+  Cache-Control: no-store
+
 /images/*
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
