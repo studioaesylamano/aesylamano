@@ -4,7 +4,7 @@
   "hero": {
     "marker": "Ethereal & Spectral · −0m",
     "headline": "AI Creative Studio",
-    "lede": "We build visual identity, campaign imagery, brand film, and intelligent content systems using generative tools powered by human creative direction. Every element curated and customised to fit the brief and deliver uncanny realism.",
+    "lede": "We build visual identity, campaign imagery, brand films, and intelligent content systems using generative tools powered by human creative direction. Every element curated and customised to fit the brief and deliver uncanny realism.",
     "cta1": "See the work",
     "cta2": "Start a project",
     "image": ""
@@ -365,35 +365,35 @@
   },
   "social": {
     "instagram": "https://www.instagram.com/aesylamano/",
-    "linkedin": "",
+    "linkedin": "https://www.linkedin.com/company/aesyl-amano-ai-studio/?viewAsMember=true",
     "tiktok": "https://www.tiktok.com/@aesyl.amano",
     "youtube": ""
   },
   "about": {
-    "facts": [
-      {
-        "v": "AI film · brand · content systems",
-        "k": "Discipline"
-      },
-      {
-        "v": "Sofia, Bulgaria → worldwide",
-        "k": "Based"
-      },
-      {
-        "v": "English · Български",
-        "k": "Languages"
-      },
-      {
-        "v": "Kling · Seedance · the new frontier",
-        "k": "Tools"
-      }
-    ],
+    "heading": "About",
+    "image": "",
     "paragraphs": [
       "Aesyl Amano is an independent AI Production Studio based in Sofia and London.",
       "We're AI-native — film, brand systems, and content built with generative tools as the camera, the crew, and the lighting rig. That means we move fast without the work ever looking fast or cheap.",
       "Based in Sofia, working worldwide, bilingual in English and Bulgarian. Comfort as a baseline — and then we launch from it into something stranger."
     ],
-    "image": "",
-    "heading": "About"
+    "facts": [
+      {
+        "k": "Discipline",
+        "v": "AI film · brand · content systems"
+      },
+      {
+        "k": "Based",
+        "v": "Sofia, Bulgaria → worldwide"
+      },
+      {
+        "k": "Languages",
+        "v": "English · Български"
+      },
+      {
+        "k": "Tools",
+        "v": "Kling · Seedance · the new frontier"
+      }
+    ]
   }
 }
