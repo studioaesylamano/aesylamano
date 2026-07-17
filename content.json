@@ -360,8 +360,14 @@
     "email": "studio@aesylamano.com"
   },
   "footer": {
-    "left": "© 2026 Aesyl Amano · Studio Amano",
-    "right": "Sofia, BG → worldwide"
+    "left": "© 2026 Studio Aesyl Amano",
+    "right": "Sofia, BG → London, UK"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/aesylamano/",
+    "linkedin": "",
+    "tiktok": "https://www.tiktok.com/@aesyl.amano",
+    "youtube": ""
   },
   "about": {
     "facts": [
