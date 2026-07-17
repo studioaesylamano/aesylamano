@@ -65,6 +65,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="preload" href="/content.json" as="fetch" crossorigin="anonymous" />
 <link rel="preconnect" href="https://i.vimeocdn.com" crossorigin />
+<link rel="preconnect" href="https://vimeo.com" crossorigin />
 <link rel="dns-prefetch" href="https://player.vimeo.com" />
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
@@ -392,8 +393,11 @@ footer{padding:50px 0;border-top:1px solid var(--line);font-size:12px;color:var(
       vg.querySelectorAll('.video-item[data-vimeo]').forEach(function(item,idx){
         var id=item.getAttribute('data-vimeo');
         var im=item.querySelector('img');
+        var CK='vthumb:'+id;
         function setThumb(url){
-          if(!im)return;
+          if(!im||!url)return;
+          try{localStorage.setItem(CK,url);}catch(e){}
+          if(im.getAttribute('src')===url){im.style.opacity='';return;}
           im.onload=function(){im.style.opacity='';};
           im.onerror=function(){im.onerror=null;setTimeout(function(){im.src=url+(url.indexOf('?')>-1?'&':'?')+'cb='+Date.now();},1500);};
           im.src=url;
@@ -408,7 +412,9 @@ footer{padding:50px 0;border-top:1px solid var(--line);font-size:12px;color:var(
             if(attempt<3){setTimeout(function(){tryFetch(attempt+1);},700*(attempt+1));}else{viaNoembed();}
           });
         }
-        setTimeout(function(){tryFetch(0);},idx*120);
+        var cached=null;try{cached=localStorage.getItem(CK);}catch(e){}
+        if(cached){setThumb(cached);setTimeout(function(){tryFetch(0);},2000+idx*60);}
+        else{setTimeout(function(){tryFetch(0);},idx*120);}
       });
     }
 
