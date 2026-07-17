@@ -1,386 +1,309 @@
 {
-  "seoTitle": "Aesyl Amano — AI Production Studio",
-  "seoDescription": "Aesyl Amano is an AI production studio designing editorial fashion campaigns, brand films, characters and immersive environments with uncanny precision.",
-  "hero": {
-    "marker": "Ethereal & Spectral · −0m",
-    "headline": "AI Creative Studio",
-    "lede": "We build visual identity, campaign imagery, brand film, and intelligent content systems using generative tools powered by human creative direction. Every element curated and customised to fit the brief and deliver uncanny realism.",
-    "cta1": "See the work",
-    "cta2": "Start a project",
-    "image": ""
-  },
-  "logos": {
-    "heading": "",
-    "items": [
-      {
-        "image": "/images/BOCHKO.jpg"
-      },
-      {
-        "image": "/images/BPFL.jpg"
-      },
-      {
-        "image": "/images/CUPFFEE.jpg"
-      },
-      {
-        "image": "/images/ELYSEE RESIDENCE.jpg"
-      },
-      {
-        "image": "/images/FOODCARD.jpg"
-      },
-      {
-        "image": "/images/GREEN FOREST.jpg"
-      },
-      {
-        "image": "/images/ISLEEP.jpg"
-      },
-      {
-        "image": "/images/KATALOG DOM.jpg"
-      },
-      {
-        "image": "/images/EVOLUTION VASSO.jpg"
-      },
-      {
-        "image": "/images/MSG PLS.jpg"
-      },
-      {
-        "image": "/images/P.jpg"
-      },
-      {
-        "image": "/images/PARKFLY GENEVA.jpg"
-      },
-      {
-        "image": "/images/PLATINUM.jpg"
-      },
-      {
-        "image": "/images/RAZLOG RESIDENTIAL PARK.jpg"
-      },
-      {
-        "image": "/images/RST.jpg"
-      },
-      {
-        "image": "/images/sjelro.jpg"
-      },
-      {
-        "image": "/images/SOMONI.jpg"
-      },
-      {
-        "image": "/images/TIME STUDIO.jpg"
-      },
-      {
-        "image": "/images/TEODOR.jpg"
-      }
-    ]
-  },
-  "work": {
-    "heading": "Selected work",
-    "items": [
-      {
-        "tag": "Campaign for Teodor",
-        "title": "Water Reflections",
-        "desc": "",
-        "image": "/images/AesylAmano1.webp",
-        "detail": "",
-        "gallery": [
-          "/images/AesylAmano2.webp",
-          "/images/AesylAmano3.webp",
-          "/images/AesylAmano4.webp",
-          "/images/AesylAmano5.webp",
-          "/images/AesylAmano6.webp",
-          "/images/AesylAmano7.webp"
-        ]
-      },
-      {
-        "tag": "Campaign for LLAGGI",
-        "title": "Stadium",
-        "desc": "",
-        "image": "/images/AesylAmano8.webp",
-        "detail": "",
-        "gallery": [
-          "/images/AesylAmano9.webp",
-          "/images/AesylAmano13.webp",
-          "/images/AesylAmano12.webp",
-          "/images/AesylAmano11.webp",
-          "/images/AesylAmano10.webp",
-          "/images/AesylAmano14.webp"
-        ]
-      },
-      {
-        "tag": "Campaign for Teodor",
-        "title": "Studio",
-        "desc": "",
-        "image": "/images/AesylAmano15.webp",
-        "detail": "",
-        "gallery": [
-          "/images/AesylAmano16.webp",
-          "/images/AesylAmano17.webp",
-          "/images/AesylAmano18.webp",
-          "/images/AesylAmano19.webp"
-        ]
-      },
-      {
-        "tag": "Campaign for Pokrivki.bg",
-        "title": "Family Home",
-        "desc": "",
-        "image": "/images/AesylAmano21.webp",
-        "detail": "",
-        "gallery": [
-          "/images/AesylAmano22.webp",
-          "/images/AesylAmano23.webp",
-          "/images/AesylAmano24.webp",
-          "/images/AesylAmano25.webp",
-          "/images/AesylAmano26.webp",
-          "/images/AesylAmano28.webp",
-          "/images/AesylAmano27.webp"
-        ]
-      },
-      {
-        "tag": "Digital Twin",
-        "title": "Jenny Shen",
-        "desc": "",
-        "image": "/images/hf_20260507_132932_3eca1b33-fa91-495e-bff5-56c718a21072.webp",
-        "detail": "",
-        "gallery": [
-          "/images/hf_20260427_180826_d39f3012-52f6-4970-b700-b3e5cf506e6c.webp",
-          "/images/hf_20260427_181505_b11f70d1-0b69-4afe-b66f-d0c59ba1092c.webp",
-          "/images/hf_20260513_122452_6a1b2c4e-9fe7-4502-8725-6fe7be9632ff.webp",
-          "/images/hf_20260513_122934_6326010a-9e49-4b16-b281-29c8d7b1e9c0.webp",
-          "/images/hf_20260513_123352_657cc577-6aa0-472a-ba94-01739e709dd7.webp",
-          "/images/hf_20260427_181208_fafd39fd-0fcc-47fd-969f-2ac744a51679.webp",
-          "/images/hf_20260427_181207_496a0eae-933b-4ba6-b943-68bbdeb81c2b.webp",
-          "/images/hf_20260427_180826_05432081-de64-4316-aa89-28a1338240ab.webp",
-          "/images/hf_20260427_180826_ad6e3277-6196-4fa4-85e3-1a757a0aad87.webp",
-          "/images/hf_20260427_180825_5526adc4-c370-446e-9a43-564023915226.webp"
-        ]
-      },
-      {
-        "tag": "Editorial",
-        "title": "Dark Fantasy",
-        "desc": "",
-        "image": "/images/AesylAmano50.webp",
-        "detail": "",
-        "gallery": [
-          "/images/AesylAmano46.webp",
-          "/images/AesylAmano47.webp",
-          "/images/AesylAmano45.webp",
-          "/images/AesylAmano44.webp",
-          "/images/AesylAmano48.webp",
-          "/images/AesylAmano49.webp",
-          "/images/AesylAmano42.webp",
-          "/images/AesylAmano41.webp",
-          "/images/AesylAmano43.webp"
-        ]
-      },
-      {
-        "tag": "Product Photography",
-        "title": "S-Gifts Home",
-        "desc": "",
-        "image": "/images/AesylAmano_new.webp",
-        "detail": "",
-        "gallery": [
-          "/images/001_Knife Set.webp",
-          "/images/002_Knife Set.webp",
-          "/images/003_Knife Set.webp",
-          "/images/004_Knife Set.webp",
-          "/images/551_Knife Set.webp",
-          "/images/552_Knife Set.webp",
-          "/images/553_Knife Set.webp",
-          "/images/554_Knife Set.webp",
-          "/images/hf_20260630_114317_4141f935-50e0-4341-ae8e-7f03f1457c43.webp",
-          "/images/hf_20260630_132741_bfda4148-9224-48c0-b87d-12a9d165f27f.webp",
-          "/images/hf_20260630_151123_c0516451-dc67-476e-84d2-d371f65f8879.webp",
-          "/images/hf_20260630_114610_5c89d67d-17f6-49e7-8cec-546bcb96cf52.webp",
-          "/images/hf_20260630_132733_902d7e18-14a2-44e2-9aaf-9ee9054ee4ba.webp",
-          "/images/hf_20260630_143441_db45ed16-5c72-44ed-9455-9dcb8296242e.webp",
-          "/images/001_LAMP.webp",
-          "/images/002_LAMP.webp",
-          "/images/003_LAMP.webp",
-          "/images/111_LAMP.webp",
-          "/images/112_LAMP.webp",
-          "/images/113_LAMP.webp"
-        ]
-      },
-      {
-        "tag": "Product Photography",
-        "title": "Pokrivki.bg Home",
-        "desc": "",
-        "image": "/images/Untitled design (31).webp",
-        "detail": "",
-        "gallery": [
-          "/images/hf_20260117_185734_8d3af411-2a6f-41ef-96f0-4730d83d6d9f.webp",
-          "/images/hf_20260117_200141_601f4254-0a9f-4f7a-875d-c9f8249986f8.webp",
-          "/images/hf_20260117_201349_d1b2f579-f6f3-469b-b2e3-b488046dec62.webp",
-          "/images/hf_20260123_111210_df46fdda-d4cc-4f82-b5c5-5e1e93e5cf6c.webp",
-          "/images/hf_20260123_110638_3e699ca6-07c5-43ad-9858-7ee3c81624f8.webp",
-          "/images/hf_20260123_114014_da5335fd-0acc-4dcb-bfa1-c006b2ae4174.webp",
-          "/images/hf_20260123_120419_d7f81f9a-75a5-475e-b496-53cbff747582.webp",
-          "/images/977ca7dc-5be5-40cd-af03-bddb9da6668b.webp",
-          "/images/9ee55ab8-3bd5-4fa3-ab69-fa56312e75c9.webp",
-          "/images/hf_20260117_173809_7ba2ecbb-a1b7-4a6c-b96e-69e5448e0947.webp",
-          "/images/hf_20260117_181606_f770e2af-b603-4d71-90aa-efa0aba036b8.webp",
-          "/images/8b21786a-506b-4895-84e0-160cf687234b.webp"
-        ]
-      },
-      {
-        "tag": "Interior/Exterior Visualisation",
-        "title": "Campaigns",
-        "desc": "",
-        "image": "/images/AesylAmano57.webp",
-        "detail": "",
-        "gallery": [
-          "/images/AesylAmano56.webp",
-          "/images/AesylAmano58.webp",
-          "/images/AesylAmano59.webp",
-          "/images/AesylAmano60.webp",
-          "/images/AesylAmano51.webp",
-          "/images/AesylAmano52.webp",
-          "/images/AesylAmano53.webp",
-          "/images/AesylAmano55.webp",
-          "/images/AesylAmano54.webp",
-          "/images/AesylAmano33.webp",
-          "/images/AesylAmano34.webp",
-          "/images/AesylAmano35.webp",
-          "/images/AesylAmano36.webp",
-          "/images/AesylAmano37.webp",
-          "/images/AesylAmano38.webp",
-          "/images/AesylAmano40.webp",
-          "/images/AesylAmano39.webp",
-          "/images/AesylAmano29.webp",
-          "/images/AesylAmano30.webp",
-          "/images/AesylAmano31.webp",
-          "/images/AesylAmano32.webp"
-        ]
-      }
-    ]
-  },
-  "videos": {
-    "heading": "Video",
-    "items": [
-      {
-        "title": "Brand Film",
-        "url": "https://vimeo.com/1208767348?share=copy&fl=sv&fe=ci"
-      },
-      {
-        "title": "Brand Film",
-        "url": "https://vimeo.com/1208767349?share=copy&fl=sv&fe=ci"
-      },
-      {
-        "title": "Brand FIlm",
-        "url": "https://vimeo.com/1208767350?share=copy&fl=sv&fe=ci"
-      },
-      {
-        "title": "Short Film",
-        "url": "https://vimeo.com/1208765420?share=copy&fl=sv&fe=ci"
-      },
-      {
-        "title": "Short Film",
-        "url": "https://vimeo.com/1208765418?share=copy&fl=sv&fe=ci"
-      },
-      {
-        "title": "Short Film",
-        "url": "https://vimeo.com/1208772831?share=copy&fl=sv&fe=ci"
-      },
-      {
-        "title": "Short Film",
-        "url": "https://vimeo.com/1208765419?share=copy&fl=sv&fe=ci"
-      },
-      {
-        "title": "Short Film",
-        "url": "https://vimeo.com/1208765417?share=copy&fl=sv&fe=ci"
-      },
-      {
-        "title": "Short Film",
-        "url": "https://vimeo.com/1208768734?share=copy&fl=sv&fe=ci"
-      }
-    ]
-  },
-  "services": {
-    "heading": "Services & Pricing",
-    "items": [
-      {
-        "marker": "Let the world carry your brand",
-        "title": "AI Production",
-        "price": "",
-        "feature": false,
-        "features": [
-          "Editorial/Campaign",
-          "Brand Films",
-          "Product Photography",
-          "Music & SFX",
-          "Prompt & Systems Engineering",
-          "Advertisement/UGC",
-          "Digital Twins",
-          "Interior Visualisation"
-        ],
-        "detail": "##### EDITORIAL & CAMPAIGN VISUALS\n\nHyper-realistic fashion, lifestyle and retail imagery in 4K and 8K. Designed to brief, customised to any aspect ratio across every platform.\n\n##### BRAND FILMS, COMMERCIALS & SOCIAL VIDEO\n\nAI brand films, commercials and social content. Stylised or photoreal, engineered for engagement and scaled across formats.\n\n##### PRODUCT PHOTOGRAPHY\n\nStandard product photos transformed into high-end marketing assets in luxury interiors or natural landscapes.\n\n##### PROMPT & SYSTEMS ENGINEERING\n\nWe design workflow systems and prompt libraries for companies adopting AI internally. Turning any creative process into a reliable production layer.\n\n##### Advertisement/UGC\n\nAdvertisement and User Generated Content tailored to tell the story of your product in an engaging and relatable way. Reach new audiences through realism or high concept short films.\n\n##### DIGITAL TWINS & BRAND AMBASSADORS\n\nAI replicas of real people or original brand faces, owned by you and exclusive to your campaigns. Choose from our digital model agency or commission your own.\n\n##### INTERIOR & SPACE VISUALISATION\n\nVacant properties and empty rooms transformed into fully furnished, photoreal living spaces. Built for real estate, interior designers and property staging."
-      },
-      {
-        "marker": "Fracture Reality",
-        "title": "Digital & Interactive",
-        "price": "",
-        "feature": false,
-        "features": [
-          "AR/VR",
-          "Holographic Events",
-          "Virtual Try-On",
-          "Live AI Avatars",
-          "Custom GPTs",
-          "Customer Support Agents",
-          "Internal Automation"
-        ],
-        "detail": "##### AR & VR BRAND EXPERIENCES\n\nAugmented and virtual reality environments for product launches and spatial brand storytelling. Audiences become part of the experience.\n\n##### HOLOGRAPHIC EVENTS & 3D MAPPING\n\nPhysical spaces transformed through 3D mapping and holographic displays. Speakers “transported” globally via transparent screens for hybrid live events.\n\n##### VIRTUAL TRY-ON & SHOPPABLE VIDEO\n\nImmersive try-on for fashion and beauty that boosts consumer confidence and reduces return rates. The video itself becomes the checkout.\n\n##### LIVE AI AVATARS & STREAMING PRESENTERS\n\nReal-time digital presenters for livestreams, gaming and corporate webinars. Driven by your team, performed by AI.\n\n##### CUSTOM GPTS & PRIVATE KNOWLEDGE BASES\n\nPrivate AI models trained exclusively on your internal documents. Institutional knowledge accessible to your team in seconds, with data kept confidential.\n\n##### CUSTOMER SUPPORT AGENTS & CHATBOTS\n\nAction-oriented AI agents fully integrated into your systems. Live bookings, refunds and upsells inside the chat — round the clock.\n\n##### INTERNAL AUTOMATION & B2B SYSTEMS\n\nIntelligent agents that streamline workflows and replace manual tasks. Reporting, routing and admin handled automatically."
-      },
-      {
-        "marker": "Don't reach • Be found",
-        "title": "Marketing",
-        "price": "",
-        "feature": false,
-        "features": [
-          "Content Strategy",
-          "Dynamic Creative Optimisation",
-          "Personalised Campaigns",
-          "Localisation",
-          "Social Media Management",
-          "SEO",
-          "Workshops"
-        ],
-        "detail": "##### CONTENT STRATEGY & SUBSCRIPTION\n\nMonthly subscription delivering AI-generated images, videos and social posts in your brand voice.\n\n##### DYNAMIC CREATIVE OPTIMISATION\n\nAds that adapt in real time — background, copy, avatar — based on the viewer. Engineered for the highest conversion rate.\n\n##### HYPER-PERSONALISED CAMPAIGNS AT SCALE\n\nPersonalised emails, product descriptions and ad copy generated from individual user data. Every customer receives a message written for them.\n\n##### MULTI-MARKET LOCALISATION & VERSIONING\n\nCampaigns adapted and versioned across every market you sell in. Native-quality output without translation agencies.\n\n##### SOCIAL MEDIA MANAGEMENT\n\nEnd-to-end social planning, content generation, hashtag selection and automated posting. The growth cycle, automated.\n\n##### PROGRAMMATIC SEO & STRATEGIC CONSULTING\n\nHundreds of niche-specific SEO articles and landing pages monthly. Plus strategic AI adoption consulting for marketing teams.\n\n##### WORKSHOPS & TEAM ENABLEMENT\n\nHands-on AI training for your designers and copywriters. Custom prompt libraries built and optimised for each role."
-      }
-    ]
-  },
-  "contact": {
-    "heading": "Join the Waitlist",
-    "lede": "Be first to know when we open. Tell us a little about you and we will keep you posted.",
-    "email": "studio@aesylamano.com"
-  },
-  "footer": {
-    "left": "© 2026 Aesyl Amano · Studio Amano",
-    "right": "Sofia, BG → worldwide"
-  },
-  "about": {
-    "facts": [
-      {
-        "v": "AI film · brand · content systems",
-        "k": "Discipline"
-      },
-      {
-        "v": "Sofia, Bulgaria → worldwide",
-        "k": "Based"
-      },
-      {
-        "v": "English · Български",
-        "k": "Languages"
-      },
-      {
-        "v": "Kling · Seedance · the new frontier",
-        "k": "Tools"
-      }
-    ],
-    "paragraphs": [
-      "Aesyl Amano is an independent AI Production Studio based in Sofia and London.",
-      "We're AI-native — film, brand systems, and content built with generative tools as the camera, the crew, and the lighting rig. That means we move fast without the work ever looking fast or cheap.",
-      "Based in Sofia, working worldwide, bilingual in English and Bulgarian. Comfort as a baseline — and then we launch from it into something stranger."
-    ],
-    "image": "",
-    "heading": "About"
-  }
+"seoTitle": "Aesyl Amano — AI Creative Studio | Film, Brand & Content",
+"seoDescription": "Aesyl Amano is an AI-native creative studio in Sofia & London — editorial campaigns, brand films, product visuals and content systems with uncanny realism.",
+"hero": {
+"marker": "Ethereal & Spectral · −0m",
+"headline": "AI Creative Studio",
+"lede": "We build visual identity, campaign imagery, brand film, and intelligent content systems using generative tools powered by human creative direction. Every element curated and customised to fit the brief and deliver uncanny realism.",
+"cta1": "See the work",
+"cta2": "Start a project",
+"image": ""
+},
+"logos": {
+"heading": "",
+"items": [
+{ "image": "/images/BOCHKO.jpg" },
+{ "image": "/images/BPFL.jpg" },
+{ "image": "/images/CUPFFEE.jpg" },
+{ "image": "/images/ELYSEE RESIDENCE.jpg" },
+{ "image": "/images/FOODCARD.jpg" },
+{ "image": "/images/GREEN FOREST.jpg" },
+{ "image": "/images/ISLEEP.jpg" },
+{ "image": "/images/KATALOG DOM.jpg" },
+{ "image": "/images/EVOLUTION VASSO.jpg" },
+{ "image": "/images/MSG PLS.jpg" },
+{ "image": "/images/P.jpg" },
+{ "image": "/images/PARKFLY GENEVA.jpg" },
+{ "image": "/images/PLATINUM.jpg" },
+{ "image": "/images/RAZLOG RESIDENTIAL PARK.jpg" },
+{ "image": "/images/RST.jpg" },
+{ "image": "/images/sjelro.jpg" },
+{ "image": "/images/SOMONI.jpg" },
+{ "image": "/images/TIME STUDIO.jpg" },
+{ "image": "/images/TEODOR.jpg" }
+]
+},
+"work": {
+"heading": "Selected work",
+"items": [
+{
+"tag": "Campaign for Teodor",
+"title": "Water Reflections",
+"desc": "",
+"image": "/images/AesylAmano1.webp",
+"detail": "",
+"gallery": [
+"/images/AesylAmano2.webp",
+"/images/AesylAmano3.webp",
+"/images/AesylAmano4.webp",
+"/images/AesylAmano5.webp",
+"/images/AesylAmano6.webp",
+"/images/AesylAmano7.webp"
+]
+},
+{
+"tag": "Campaign for LLAGGI",
+"title": "Stadium",
+"desc": "",
+"image": "/images/AesylAmano8.webp",
+"detail": "",
+"gallery": [
+"/images/AesylAmano9.webp",
+"/images/AesylAmano13.webp",
+"/images/AesylAmano12.webp",
+"/images/AesylAmano11.webp",
+"/images/AesylAmano10.webp",
+"/images/AesylAmano14.webp"
+]
+},
+{
+"tag": "Campaign for Teodor",
+"title": "Studio",
+"desc": "",
+"image": "/images/AesylAmano15.webp",
+"detail": "",
+"gallery": [
+"/images/AesylAmano16.webp",
+"/images/AesylAmano17.webp",
+"/images/AesylAmano18.webp",
+"/images/AesylAmano19.webp"
+]
+},
+{
+"tag": "Campaign for Pokrivki.bg",
+"title": "Family Home",
+"desc": "",
+"image": "/images/AesylAmano21.webp",
+"detail": "",
+"gallery": [
+"/images/AesylAmano22.webp",
+"/images/AesylAmano23.webp",
+"/images/AesylAmano24.webp",
+"/images/AesylAmano25.webp",
+"/images/AesylAmano26.webp",
+"/images/AesylAmano28.webp",
+"/images/AesylAmano27.webp"
+]
+},
+{
+"tag": "Digital Twin",
+"title": "Jenny Shen",
+"desc": "",
+"image": "/images/hf_20260507_132932_3eca1b33-fa91-495e-bff5-56c718a21072.webp",
+"detail": "",
+"gallery": [
+"/images/hf_20260427_180826_d39f3012-52f6-4970-b700-b3e5cf506e6c.webp",
+"/images/hf_20260427_181505_b11f70d1-0b69-4afe-b66f-d0c59ba1092c.webp",
+"/images/hf_20260513_122452_6a1b2c4e-9fe7-4502-8725-6fe7be9632ff.webp",
+"/images/hf_20260513_122934_6326010a-9e49-4b16-b281-29c8d7b1e9c0.webp",
+"/images/hf_20260513_123352_657cc577-6aa0-472a-ba94-01739e709dd7.webp",
+"/images/hf_20260427_181208_fafd39fd-0fcc-47fd-969f-2ac744a51679.webp",
+"/images/hf_20260427_181207_496a0eae-933b-4ba6-b943-68bbdeb81c2b.webp",
+"/images/hf_20260427_180826_05432081-de64-4316-aa89-28a1338240ab.webp",
+"/images/hf_20260427_180826_ad6e3277-6196-4fa4-85e3-1a757a0aad87.webp",
+"/images/hf_20260427_180825_5526adc4-c370-446e-9a43-564023915226.webp"
+]
+},
+{
+"tag": "Editorial",
+"title": "Dark Fantasy",
+"desc": "",
+"image": "/images/AesylAmano50.webp",
+"detail": "",
+"gallery": [
+"/images/AesylAmano46.webp",
+"/images/AesylAmano47.webp",
+"/images/AesylAmano45.webp",
+"/images/AesylAmano44.webp",
+"/images/AesylAmano48.webp",
+"/images/AesylAmano49.webp",
+"/images/AesylAmano42.webp",
+"/images/AesylAmano41.webp",
+"/images/AesylAmano43.webp"
+]
+},
+{
+"tag": "Product Photography",
+"title": "S-Gifts Home",
+"desc": "",
+"image": "/images/AesylAmano_new.webp",
+"detail": "",
+"gallery": [
+"/images/001_Knife Set.webp",
+"/images/002_Knife Set.webp",
+"/images/003_Knife Set.webp",
+"/images/004_Knife Set.webp",
+"/images/551_Knife Set.webp",
+"/images/552_Knife Set.webp",
+"/images/553_Knife Set.webp",
+"/images/554_Knife Set.webp",
+"/images/hf_20260630_114317_4141f935-50e0-4341-ae8e-7f03f1457c43.webp",
+"/images/hf_20260630_132741_bfda4148-9224-48c0-b87d-12a9d165f27f.webp",
+"/images/hf_20260630_151123_c0516451-dc67-476e-84d2-d371f65f8879.webp",
+"/images/hf_20260630_114610_5c89d67d-17f6-49e7-8cec-546bcb96cf52.webp",
+"/images/hf_20260630_132733_902d7e18-14a2-44e2-9aaf-9ee9054ee4ba.webp",
+"/images/hf_20260630_143441_db45ed16-5c72-44ed-9455-9dcb8296242e.webp",
+"/images/001_LAMP.webp",
+"/images/002_LAMP.webp",
+"/images/003_LAMP.webp",
+"/images/111_LAMP.webp",
+"/images/112_LAMP.webp",
+"/images/113_LAMP.webp"
+]
+},
+{
+"tag": "Product Photography",
+"title": "Pokrivki.bg Home",
+"desc": "",
+"image": "/images/Untitled design (31).webp",
+"detail": "",
+"gallery": [
+"/images/hf_20260117_185734_8d3af411-2a6f-41ef-96f0-4730d83d6d9f.webp",
+"/images/hf_20260117_200141_601f4254-0a9f-4f7a-875d-c9f8249986f8.webp",
+"/images/hf_20260117_201349_d1b2f579-f6f3-469b-b2e3-b488046dec62.webp",
+"/images/hf_20260123_111210_df46fdda-d4cc-4f82-b5c5-5e1e93e5cf6c.webp",
+"/images/hf_20260123_110638_3e699ca6-07c5-43ad-9858-7ee3c81624f8.webp",
+"/images/hf_20260123_114014_da5335fd-0acc-4dcb-bfa1-c006b2ae4174.webp",
+"/images/hf_20260123_120419_d7f81f9a-75a5-475e-b496-53cbff747582.webp",
+"/images/977ca7dc-5be5-40cd-af03-bddb9da6668b.webp",
+"/images/9ee55ab8-3bd5-4fa3-ab69-fa56312e75c9.webp",
+"/images/hf_20260117_173809_7ba2ecbb-a1b7-4a6c-b96e-69e5448e0947.webp",
+"/images/hf_20260117_181606_f770e2af-b603-4d71-90aa-efa0aba036b8.webp",
+"/images/8b21786a-506b-4895-84e0-160cf687234b.webp"
+]
+},
+{
+"tag": "Interior/Exterior Visualisation",
+"title": "Campaigns",
+"desc": "",
+"image": "/images/AesylAmano57.webp",
+"detail": "",
+"gallery": [
+"/images/AesylAmano56.webp",
+"/images/AesylAmano58.webp",
+"/images/AesylAmano59.webp",
+"/images/AesylAmano60.webp",
+"/images/AesylAmano51.webp",
+"/images/AesylAmano52.webp",
+"/images/AesylAmano53.webp",
+"/images/AesylAmano55.webp",
+"/images/AesylAmano54.webp",
+"/images/AesylAmano33.webp",
+"/images/AesylAmano34.webp",
+"/images/AesylAmano35.webp",
+"/images/AesylAmano36.webp",
+"/images/AesylAmano37.webp",
+"/images/AesylAmano38.webp",
+"/images/AesylAmano40.webp",
+"/images/AesylAmano39.webp",
+"/images/AesylAmano29.webp",
+"/images/AesylAmano30.webp",
+"/images/AesylAmano31.webp",
+"/images/AesylAmano32.webp"
+]
+}
+]
+},
+"videos": {
+"heading": "Video",
+"items": [
+{ "title": "Brand Film", "url": "https://vimeo.com/1208767348?share=copy&fl=sv&fe=ci" },
+{ "title": "Brand Film", "url": "https://vimeo.com/1208767349?share=copy&fl=sv&fe=ci" },
+{ "title": "Brand FIlm", "url": "https://vimeo.com/1208767350?share=copy&fl=sv&fe=ci" },
+{ "title": "Short Film", "url": "https://vimeo.com/1208765420?share=copy&fl=sv&fe=ci" },
+{ "title": "Short Film", "url": "https://vimeo.com/1208765418?share=copy&fl=sv&fe=ci" },
+{ "title": "Short Film", "url": "https://vimeo.com/1208772831?share=copy&fl=sv&fe=ci" },
+{ "title": "Short Film", "url": "https://vimeo.com/1208765419?share=copy&fl=sv&fe=ci" },
+{ "title": "Short Film", "url": "https://vimeo.com/1208765417?share=copy&fl=sv&fe=ci" },
+{ "title": "Short Film", "url": "https://vimeo.com/1208768734?share=copy&fl=sv&fe=ci" }
+]
+},
+"services": {
+"heading": "Services & Pricing",
+"items": [
+{
+"marker": "Let the world carry your brand",
+"title": "AI Production",
+"price": "",
+"feature": false,
+"features": [
+"Editorial/Campaign",
+"Brand Films",
+"Product Photography",
+"Music & SFX",
+"Prompt & Systems Engineering",
+"Advertisement/UGC",
+"Digital Twins",
+"Interior Visualisation"
+],
+"detail": "##### EDITORIAL & CAMPAIGN VISUALS\n\nHyper-realistic fashion, lifestyle and retail imagery in 4K and 8K. Designed to brief, customised to any aspect ratio across every platform.\n\n##### BRAND FILMS, COMMERCIALS & SOCIAL VIDEO\n\nAI brand films, commercials and social content. Stylised or photoreal, engineered for engagement and scaled across formats.\n\n##### PRODUCT PHOTOGRAPHY\n\nStandard product photos transformed into high-end marketing assets in luxury interiors or natural landscapes.\n\n##### PROMPT & SYSTEMS ENGINEERING\n\nWe design workflow systems and prompt libraries for companies adopting AI internally. Turning any creative process into a reliable production layer.\n\n##### Advertisement/UGC\n\nAdvertisement and User Generated Content tailored to tell the story of your product in an engaging and relatable way. Reach new audiences through realism or high concept short films.\n\n##### DIGITAL TWINS & BRAND AMBASSADORS\n\nAI replicas of real people or original brand faces, owned by you and exclusive to your campaigns. Choose from our digital model agency or commission your own.\n\n##### INTERIOR & SPACE VISUALISATION\n\nVacant properties and empty rooms transformed into fully furnished, photoreal living spaces. Built for real estate, interior designers and property staging."
+},
+{
+"marker": "Fracture Reality",
+"title": "Digital & Interactive",
+"price": "",
+"feature": false,
+"features": [
+"AR/VR",
+"Holographic Events",
+"Virtual Try-On",
+"Live AI Avatars",
+"Custom GPTs",
+"Customer Support Agents",
+"Internal Automation"
+],
+"detail": "##### AR & VR BRAND EXPERIENCES\n\nAugmented and virtual reality environments for product launches and spatial brand storytelling. Audiences become part of the experience.\n\n##### HOLOGRAPHIC EVENTS & 3D MAPPING\n\nPhysical spaces transformed through 3D mapping and holographic displays. Speakers “transported” globally via transparent screens for hybrid live events.\n\n##### VIRTUAL TRY-ON & SHOPPABLE VIDEO\n\nImmersive try-on for fashion and beauty that boosts consumer confidence and reduces return rates. The video itself becomes the checkout.\n\n##### LIVE AI AVATARS & STREAMING PRESENTERS\n\nReal-time digital presenters for livestreams, gaming and corporate webinars. Driven by your team, performed by AI.\n\n##### CUSTOM GPTS & PRIVATE KNOWLEDGE BASES\n\nPrivate AI models trained exclusively on your internal documents. Institutional knowledge accessible to your team in seconds, with data kept confidential.\n\n##### CUSTOMER SUPPORT AGENTS & CHATBOTS\n\nAction-oriented AI agents fully integrated into your systems. Live bookings, refunds and upsells inside the chat — round the clock.\n\n##### INTERNAL AUTOMATION & B2B SYSTEMS\n\nIntelligent agents that streamline workflows and replace manual tasks. Reporting, routing and admin handled automatically."
+},
+{
+"marker": "Don't reach • Be found",
+"title": "Marketing",
+"price": "",
+"feature": false,
+"features": [
+"Content Strategy",
+"Dynamic Creative Optimisation",
+"Personalised Campaigns",
+"Localisation",
+"Social Media Management",
+"SEO",
+"Workshops"
+],
+"detail": "##### CONTENT STRATEGY & SUBSCRIPTION\n\nMonthly subscription delivering AI-generated images, videos and social posts in your brand voice.\n\n##### DYNAMIC CREATIVE OPTIMISATION\n\nAds that adapt in real time — background, copy, avatar — based on the viewer. Engineered for the highest conversion rate.\n\n##### HYPER-PERSONALISED CAMPAIGNS AT SCALE\n\nPersonalised emails, product descriptions and ad copy generated from individual user data. Every customer receives a message written for them.\n\n##### MULTI-MARKET LOCALISATION & VERSIONING\n\nCampaigns adapted and versioned across every market you sell in. Native-quality output without translation agencies.\n\n##### SOCIAL MEDIA MANAGEMENT\n\nEnd-to-end social planning, content generation, hashtag selection and automated posting. The growth cycle, automated.\n\n##### PROGRAMMATIC SEO & STRATEGIC CONSULTING\n\nHundreds of niche-specific SEO articles and landing pages monthly. Plus strategic AI adoption consulting for marketing teams.\n\n##### WORKSHOPS & TEAM ENABLEMENT\n\nHands-on AI training for your designers and copywriters. Custom prompt libraries built and optimised for each role."
+}
+]
+},
+"contact": {
+"heading": "Join the Waitlist",
+"lede": "Be first to know when we open. Tell us a little about you and we will keep you posted.",
+"email": "studio@aesylamano.com"
+},
+"footer": {
+"left": "© 2026 Aesyl Amano · Studio Amano",
+"right": "Sofia, BG → worldwide"
+},
+"about": {
+"facts": [
+{ "v": "AI film · brand · content systems", "k": "Discipline" },
+{ "v": "Sofia, Bulgaria → worldwide", "k": "Based" },
+{ "v": "English · Български", "k": "Languages" },
+{ "v": "Kling · Seedance · the new frontier", "k": "Tools" }
+],
+"paragraphs": [
+"Aesyl Amano is an independent AI Production Studio based in Sofia and London.",
+"We're AI-native — film, brand systems, and content built with generative tools as the camera, the crew, and the lighting rig. That means we move fast without the work ever looking fast or cheap.",
+"Based in Sofia, working worldwide, bilingual in English and Bulgarian. Comfort as a baseline — and then we launch from it into something stranger."
+],
+"image": "",
+"heading": "About"
+}
 }
